@@ -1,0 +1,1000 @@
+  421  sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
+  422  sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
+  423  ls
+  424  cuda
+  425  sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
+  426  sudo apt get install cuda -y
+  427  sudo apt-get install cuda -y
+  428  cuda
+  429  env
+  430  NUMBAPRO_CUDA_DRIVER
+  431  python import numpy as np
+  432  python
+  433  sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+  434  ls
+  435  sudo apt-get install cuda
+  436  sudo apt-get update
+  437  sudo apt-get install cuda
+  438  conda install accelerate
+  439  cd Downloads
+  440  ls
+  441  sh Anaconda3-5.3.1-Linux-x86_64.sh
+  442  conda install numba
+  443  cd ..
+  444  ls
+  445  cd anaconda3
+  446  ls
+  447  conda install numba
+  448  find conda
+  449  locate conda
+  450  conda
+  451  ls
+  452  cd MyStuff
+  453  ls
+  454  mkdir CD33
+  455  ls
+  456  rmdir CD33
+  457  ls
+  458  mkdir CS33
+  459  git
+  460  cd cs33
+  461  ls
+  462  cd CS33
+  463  ls
+  464  git clone
+  465  cd ..
+  466  rmdir CS33
+  467  mkdir cs33
+  468  ls
+  469  cd cs33
+  470  ls -al ~/.ssh
+  471  ssh-keygen -t rsa -b 4096 -C "evan.imperato@gmail.com"
+  472  eval "$(ssh-agent -s)"
+  473  ssh-add ~/.ssh/id_rsa
+  474  git pull
+  475  git init
+  476  ls
+  477  git push
+  478  git remote add origin git@github.com:evanimp/proj1.git
+  479  git status
+  480  git add project1-evanimp-master/
+  481  git status
+  482  git push -u origin master
+  483  ssh-add ~/.ssh/id_rsa
+  484  cd ..
+  485  ls
+  486  mkdir cs33
+  487  mkdir p0
+  488  ls
+  489  rmdir p0
+  490  ls
+  491  cd cs33
+  492  mkdir p0
+  493  cd p0
+  494  git clone --bare https://github.com/web50/project0.git
+  495  ls
+  496  cd project0.git
+  497  ls
+  498  cd branches
+  499  ls
+  500  cd ..
+  501  delete .*.
+  502  rm *.*
+  503  ls
+  504  cd ..
+  505  ls
+  506  git remote add origin git@github.com:evanimp/project0.git
+  507  git clone --bare https://github.com/web50/project0.git
+  508  ls
+  509  git push --mirror git@github.com:evanimp/project0.git
+  510  cd ..
+  511  ls
+  512  cd ..
+  513  ls
+  514  cd MyStuff
+  515  ls
+  516  cd cs33
+  517  ls
+  518  cd project1-evanimp-master
+  519  ls
+  520  git status
+  521  git diff
+  522  cd ..
+  523  ls
+  524  git remote add origin git@github.com:evanimp/project0.git
+  525  ls
+  526  cd project0-evanimp-master
+  527  ls
+  528  git remote add origin git@github.com:evanimp/project0.git
+  529  git stsus
+  530  git status
+  531  ls
+  532  git status
+  533  git add *.*
+  534  git status
+  535  ls
+  536  git add README.md
+  537  edit README.md
+  538  cd MyStuff
+  539  ls
+  540  cd ..
+  541  ls
+  542  cd cs33
+  543  ls
+  544  cd p0
+  545  ls
+  546  git status
+  547  cd ~
+  548  ls
+  549  Atom
+  550  sudo add-apt-repository ppa:webupd8team/atom
+  551  sudo apt update; sudo apt install atom
+  552  ls
+  553  cd MyStuff
+  554  ls
+  555  cd cs33
+  556  ls
+  557  cd project0-evanimp-master
+  558  git status
+  559  git push
+  560  git add README.md
+  561  git push
+  562  git commit -a -m "First push"
+  563  git config --global user.email "evan.imperato@gmail.com"
+  564  git config --global user.name "evanimp"
+  565  git commit -a -m "First push"
+  566  ls
+  567  git pull https://github.com/web50/project0.git
+  568  ls
+  569  cd ..
+  570  ls
+  571  cd https://github.com/web50/project0.git
+  572  cd project1-evanimp-master
+  573  ls
+  574  git status
+  575  git add *.*
+  576  git status
+  577  ls
+  578  git add application.py
+  579  ls
+  580  git status
+  581  diff
+  582  dif
+  583  git diff
+  584  ls
+  585  cd ..
+  586  ls
+  587  cd project0-evanimp-master
+  588  ls
+  589  git config
+  590  git config -get-all
+  591  git config --get--all
+  592  git config --global user.email
+  593  ls
+  594  git status
+  595  touch index.html
+  596  ls
+  597  git add index.html
+  598  git commit -m "Add first webpage"
+  599  git push
+  600  git clone git@github.com:web50/project0-evanimp.git
+  601  git status
+  602  git pull
+  603  git config --global user.email "evi857@g.harvard.edu"
+  604  git pull
+  605  git clone git@github.com:web50/project0-evanimp.git
+  606  git config --global user.email
+  607  cd ~
+  608  ls
+  609  cd cs33
+  610  mkdir cs33
+  611  cd cs33
+  612  ls
+  613  mkdir project0
+  614  cd project0
+  615  git clone git config --global user.email
+  616  git clone git@github.com:web50/project0-evanimp.git
+  617  git config --global user.email "evan.imperato@gmail.com"
+  618  git clone git@github.com:web50/project0-evanimp.git
+  619  git clone git@github.com:web50/project0-evanimp
+  620  git clone git@github.com:web50/project0-evanimp.git
+  621  git clone https://github.com/web50/project0-evanimp.git
+  622  ls
+  623  cd project0-evanimp
+  624  ls
+  625  git config --global user.email
+  626  git pull https://github.com/web50/project0-evanimp.git
+  627  ls
+  628  git status
+  629  git add index.html
+  630  git add my_styles.css
+  631  git commit
+  632  git commit -m "line breaks"
+  633  git push
+  634  git pull https://github.com/web50/project0-evanimp.git
+  635  ls
+  636  cd cs33
+  637  ls
+  638  mkdir project1
+  639  cd project1
+  640  git clone https://github.com/evanimp/project1-evanimp.git
+  641  ls
+  642  cd project1-evanimp
+  643  ls
+  644  flask run
+  645  export FLASK_APP=application.py
+  646  flask run
+  647  pip install Flask-Session
+  648  flask run
+  649  export DATABASE_URL=postgres://riwsnsqjkmwmuf:72a1e329db911019b2a583cdeb7bf28b0c79fb8eeaddb5427b1ab6acbfc6b99b@ec2-54-243-128-95.compute-1.amazonaws.com:5432/del7hu6b5hr9tf
+  650  flask run
+  651  apt-get install python-psycopg2
+  652  sudo apt-get install python-psycopg2
+  653  flask run
+  654  sudo pip install psycopg2
+  655  pip install psycopg2
+  656  flask run
+  657  cd cs33
+  658  ls
+  659  cd project2
+  660  ls
+  661  cd project2-evanimp
+  662  ls
+  663  export FLASK_APP = application.py
+  664  export FLASK_APP=application.py
+  665  env
+  666  flask run
+  667  pip install flask-socketio
+  668  flask run
+  669  cd cs33
+  670  cd project2
+  671  ls
+  672  cd project2-evanimp
+  673  git status
+  674  git diff
+  675  git reset --hard HEAD
+  676  git clean -xffd
+  677  git pull
+  678  export FLASK_APP=application.py
+  679  flask run
+  680  git status
+  681  git pull
+  682  flask run
+  683  git status
+  684  git reset --hard HEAD
+  685  git clean -xffd
+  686  git pull
+  687  ls
+  688  cd templates
+  689  ls
+  690  cd ..
+  691  git reset --hard HEAD
+  692  git clean -xffd
+  693  git pull
+  694  flask run
+  695  git reset --hard HEAD
+  696  git clean -xffd
+  697  git pull
+  698  flask run
+  699  git reset --hard HEAD
+  700  git clean -xffd
+  701  git pull
+  702  pip3 install -r requirements.txt
+  703  sudo apt install python3-pip
+  704  pip3 install -r requirements.txt
+  705  flask run
+  706  git add -u
+  707  git commit -m limitText
+  708  git push
+  709  git reset --hard HEAD
+  710  git clean -xffd
+  711  git pull
+  712  flask run
+  713  cd ../..
+  714  cd project3
+  715  mkdir project3
+  716  cd project3
+  717  ls
+  718  git clone https://github.com/evanimp/project3-evanimp.git
+  719  ls
+  720  cd project3-evanimp
+  721  ls
+  722  pip3 install -r requirements.txt
+  723  python manage.py runserver
+  724  python3 manage.py runserver
+  725  pip3 install -r requirements.txt
+  726  python3 manage.py runserver
+  727  pip install Django==2.0.3
+  728  python3 manage.py runserver
+  729  pip install --upgrade pip
+  730  cd cs33/project3/project3-evanimp
+  731  git reset --hard HEAD
+  732  git clean -xffd
+  733  git pull
+  734  pyhton3 manage.py makemigrations
+  735  python3 manage.py makemigrations
+  736  python3 manage.py runserver
+  737  git reset --hard HEAD
+  738  git clean -xffd
+  739  git pull
+  740  python3 manage.py makemigrations
+  741  python manage.py makemigrations
+  742  cd cs33
+  743  ls
+  744  cd project3
+  745  ls
+  746  cd project3-evanimp
+  747  git reset --hard HEAD
+  748  git clean -xffd
+  749  git pull
+  750  python3 manage.py runserver
+  751  python3 manage.py makemigrations
+  752  conda install anaconda-clean
+  753  anaconda-clean
+  754  ls
+  755  rm -rf ~/anaconda3
+  756  cd cs33
+  757  cd project3/project3-evanimp
+  758  ls
+  759  python3 manage.py makemigrations
+  760  python3 manage.py migrate
+  761  python3 manage.py runserver
+  762  git reset --hard HEAD
+  763  git clean -xffd
+  764  git pull
+  765  python3 manage.py makemigrations
+  766  python3 manage.py migrate
+  767  python3 manage.py runserver
+  768  git add -u
+  769  git commit -m styles
+  770  git push
+  771  git reset --hard HEAD
+  772  git clean -xffd
+  773  git pull
+  774  python3 manage.py makemigrations
+  775  python3 manage.py migrate
+  776  python3 manage.py runserver
+  777  git add -u
+  778  git commit -m last
+  779  git push
+  780  cs cs33
+  781  ls
+  782  cd cs33
+  783  ls
+  784  mkdir final-project
+  785  cd final-project
+  786  git clone https://github.com/evanimp/final-project-evanimp.git
+  787  ls
+  788  cd final-project-evanimp
+  789  python3 manage.py runserver
+  790  git reset --hard HEAD
+  791  git clean -xffd
+  792  git pull
+  793  python3 manage.py runserver
+  794  grep -R *Query*
+  795  python3 manage.py runserver
+  796  python3 manage.py rumakemigrations
+  797  python3 manage.py makemigrations
+  798  python3 manage.py migrate
+  799  python3 manage.py runserver
+  800  git add -u
+  801  git commit -m folder_count
+  802  git push
+  803  python3 manage.py runserver
+  804  git reset --hard HEAD
+  805  git clean -xffd
+  806  git pull
+  807  python3 manage.py runserver
+  808  git add -u
+  809  git commit -m padding
+  810  git push
+  811  python3 manage.py runserver
+  812  python3 manage.py rumakemigrations
+  813  python3 manage.py makemigrations
+  814  python3 manage.py migrate
+  815  python3 manage.py runserver
+  816  git add -u
+  817  git commit -m model_bin
+  818  git push
+  819  python3 manage.py runserver
+  820  git reset --hard HEAD
+  821  git clean -xffd
+  822  git pull
+  823  python3 manage.py runserver
+  824  lspci -vnn | grep VGA -A 12
+  825  cd /
+  826  ls
+  827  java -version
+  828  java -version
+  829  sudo add-apt-repository ppa:linuxuprising/java
+  830  sudo apt-get update
+  831  sudo apt-get install oracle-java12-installer
+  832  java -version
+  833  ls
+  834  cd j_eclipse
+  835  ls
+  836  sudo tar xzf eclipse-inst-linux64.tar.gz
+  837  ls
+  838  sudo ./eclipse-installer
+  839  sudo eclipse-installer
+  840  ls -a
+  841  ./eclipse-installer
+  842  cd eclipse-installer
+  843  ls
+  844  sudo ./eclipse-inst
+  845  cd /
+  846  ls
+  847  cd home/evan
+  848  cd home
+  849  cd /home
+  850  ls
+  851  cd /evan
+  852  cd evan
+  853  ls
+  854  cd /root/eclipse-workspace
+  855  cd /
+  856  find Test_Delete
+  857  find -r Test_Delete
+  858  ls
+  859  cd /root
+  860  sudo cd /root
+  861  ls
+  862  grep -r Test_Delete
+  863  cd /home/evan
+  864  ls
+  865  find td
+  866  cd /
+  867  ls
+  868  man find
+  869  find / 'td'
+  870  cd /root/eclipse-workspace
+  871  sudo cd /root/eclipse-workspace
+  872  sudo  /root/eclipse-workspace
+  873  sudo ls /root/eclipse-workspace
+  874  sudo gnome-terminal
+  875  export CLASSPATH=$CLASSPATH:/home/evan/cs97java
+  876  echo $CLASSPATH
+  877  export CLASSPATH=/home/evan/cs97java
+  878  echo $CLASSPATH
+  879  ls
+  880  cd /home/evan
+  881  ls
+  882  cd cs97java
+  883  ls
+  884  cd ledger
+  885  ls
+  886  javac -d Block.java
+  887  javac -d Ledger.java
+  888  javac  Ledger.java
+  889  javac  Block.java
+  890  ls
+  891  java Ledger.class
+  892  echo $CLASSPATH
+  893  export CLASSPATH=/home/evan/cs97java/ledger
+  894  echo $CLASSPATH
+  895  java Ledger.class
+  896  java Ledger
+  897  java Ledger.class
+  898  java -classpath /home/evan/cs97java ledger.Ledger
+  899  javac  Block.java
+  900  javac  Ledger.java
+  901  java -classpath /home/evan/cs97java ledger.Ledger
+  902  javac  Ledger.java
+  903  javac -d /home/evan/cs97java/ledger *.java
+  904  java -classpath /home/evan/cs97java ledger.Ledger
+  905  javac -d /home/evan/cs97java/ledger *.java
+  906  java -classpath /home/evan/cs97java ledger.Ledger
+  907  javac -d /home/evan/cs97java/ledger *.java
+  908  java -classpath /home/evan/cs97java ledger.Ledger
+  909  javac -d /home/evan/cs97java/ledger *.java
+  910  java -classpath /home/evan/cs97java ledger.Ledger
+  911  ls
+  912  rm *.class
+  913  ls
+  914  javac -d /home/evan/cs97java/ledger *.java
+  915  java -classpath /home/evan/cs97java ledger.Ledger
+  916  ls
+  917  javac -d /home/evan/cs97java/ledger *.java
+  918  java -classpath /home/evan/cs97java ledger.Ledger
+  919  javac -d /home/evan/cs97java/ledger *.java
+  920  java -classpath /home/evan/cs97java ledger.Ledger
+  921  java -classpath /home/evan/cs97java/ ledger.Ledger
+  922  java -classpath /home/evan/cs97java ledger.Ledger
+  923  ls
+  924  javac Block.java
+  925  javac Ledger.java
+  926  java -classpath /home/evan/cs97java ledger.Ledger
+  927  javac -d /home/evan/cs97java/ledger/ *.java
+  928  java -classpath /home/evan/cs97java ledger.Ledger
+  929  javac Ledger.java
+  930  java -classpath /home/evan/cs97java ledger.Ledger
+  931  cd /root
+  932  ls
+  933  set
+  934  env
+  935  emacs /etc/skel/.profile
+  936  emacs /etc/environment
+  937  ls /etc/bashrc
+  938  cd etc
+  939  cd /etc
+  940  ls
+  941  cd /bashrc
+  942  cd /bash.bashrc
+  943  emacs /bash.bashrc
+  944  cd com/cscie97/ledger
+  945  ls
+  946  javac CommandProccessor.java
+  947  javac CommandProcessor.java
+  948  java -classpath /home/evan com.cscie97.ledger.CommandProcessor(tf.txt)
+  949  javac CommandProcessor.java
+  950  javac TestDriver.java
+  951  javac CommandProcessor.java
+  952  javac TestDriver.java
+  953  javac CommandProcessor.java
+  954  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  955  javac CommandProcessor.java
+  956  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  957  javac CommandProcessor.java
+  958  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  959  javac CommandProcessor.java
+  960  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  961  javac CommandProcessor.java
+  962  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  963  javac CommandProcessor.java
+  964  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  965  javac CommandProcessor.java
+  966  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  967  javac CommandProcessor.java
+  968  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  969  javac CommandProcessor.java
+  970  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  971  javac CommandProcessor.java
+  972  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  973  javac CommandProcessor.java
+  974  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  975  javac CommandProcessor.java
+  976  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  977  javac CommandProcessor.java
+  978  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  979  javac CommandProcessor.java
+  980  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  981  javac CommandProcessor.java
+  982  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  983  javac CommandProcessor.java
+  984  java -classpath /home/evan com.cscie97.ledger.CommandProcessor
+  985  ls
+  986  rm *.class
+  987  cd test
+  988  rm *.class
+  989  cd ..
+  990  rm *.class
+  991  cd test
+  992  rm *.class
+  993  cd /home/evan/cscie97_hw1/com/cscie97/ledger/test
+  994  ls
+  995  rm *.class
+  996  cd ..
+  997  rm *.class
+  998  man zip
+  999  man unzip
+ 1000  cd /home/evan/cscie_hw1
+ 1001  cd /home/evan/cscie97_hw1
+ 1002  zip -r hw1.zip /home/evan/cscie97_hw1
+ 1003  ls
+ 1004  cd /home/evan/test
+ 1005  ls
+ 1006  unzip hw1.zip
+ 1007  cd /home/evan/cscie97_hw1
+ 1008  ls
+ 1009  zip -r hw1.zip *.*
+ 1010  zip -r hw1.zip .
+ 1011  cd /home/evan/test
+ 1012  ls
+ 1013  unzip hw1.zip
+ 1014  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1015  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1016  ls
+ 1017  cd HW1_Eclipse
+ 1018  ls
+ 1019  unzip hw1.zip
+ 1020  ls
+ 1021  env
+ 1022  sudo gnome-terminal
+ 1023  env
+ 1024  sudo gnome-terminal
+ 1025  ls
+ 1026  cd cscie97_hw1
+ 1027  ls
+ 1028  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1029  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1030  java -cp . com.cscie97.ledger.test.TestDriver my.script
+ 1031  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1032  java -cp . com.cscie97.ledger.test.TestDriver my.script
+ 1033  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1034  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1035  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1036  java -cp . com.cscie97.ledger.test.TestDriver my.script
+ 1037  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1038  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1039  javadoc com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1040  java -cp . com.cscie97.ledger.test.TestDriver tf.txt
+ 1041  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1042  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1043  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1044  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1045  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1046  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1047  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1048  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1049  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1050  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1051  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1052  javac -Xlint:unchecked com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1053  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1054  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1055  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1056  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1057  javac -Xlint:unchecked com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1058  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1059  javac -Xlint:unchecked com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1060  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1061  java -cp . com.cscie97.ledger.test.TestDriver ledger.script > ledger.out
+ 1062  java -cp . com.cscie97.ledger.test.TestDriver my.script
+ 1063  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1064  java -cp . com.cscie97.ledger.test.TestDriver my.script
+ 1065  java -cp . com.cscie97.ledger.test.TestDriver my.script > my.out
+ 1066  java -cp . com.cscie97.ledger.test.TestDriver myCommands.script
+ 1067  cd /
+ 1068  find *eclipse*
+ 1069  where is eclipse
+ 1070  whereis eclipse
+ 1071  find  eclipse
+ 1072  ls
+ 1073  cd root
+ 1074  ls
+ 1075  cd eclipse
+ 1076  ls
+ 1077  cd jee-2019-06
+ 1078  ls
+ 1079  cd eclipse
+ 1080  ls
+ 1081  ./eclipse
+ 1082  cd /root/eclipse/jee-2019-06/eclipse
+ 1083  ./eclipse
+ 1084  pos
+ 1085  ps
+ 1086  ./eclipse
+ 1087  sudo gnome-terminal
+ 1088  ls
+ 1089  cd cscie97_hw2
+ 1090  ls
+ 1091  javac com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1092  java -cp . com.cscie97.store.test.TestDriver store.script
+ 1093  java -cp . com.cscie97.store.test.TestDriver multi_store.script
+ 1094  ls
+ 1095  cd com/cscie97
+ 1096  ls
+ 1097  cd store
+ 1098  ls
+ 1099  cd model
+ 1100  wc -l .
+ 1101  wc -l *.*
+ 1102  wc -l *.java
+ 1103  cd /home/evan
+ 1104  ls
+ 1105  cd cscie97_hw1
+ 1106  ls
+ 1107  cd com/ledger
+ 1108  cd com
+ 1109  ls
+ 1110  cd cscie97/ledger
+ 1111  ls
+ 1112  wc -l *.java
+ 1113  cd /hmoe/evan
+ 1114  cd ..
+ 1115  ls
+ 1116  cd cscie97_hw2
+ 1117  cd com/cscie97/store
+ 1118  ls
+ 1119  cd model
+ 1120  cd ..
+ 1121  javac com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1122  java -cp . com.cscie97.store.test.TestDriver store.script > store.out
+ 1123  java -cp . com.cscie97.store.test.TestDriver another_store.script > another_store.out
+ 1124  java -cp . com.cscie97.store.test.TestDriver store_model_script.txt > their_store.out
+ 1125  cd com/cscie97
+ 1126  cd store/model
+ 1127  ls
+ 1128  rm *.class
+ 1129  cd ..
+ 1130  cd test
+ 1131  rm *.class
+ 1132  cd ../../..
+ 1133  ls
+ 1134  cd ..
+ 1135  ls
+ 1136  zip -r hw2.zip .
+ 1137  ls
+ 1138  zip -r Evan_Imperato_assignment2.zip .
+ 1139  javac com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1140  java -cp . com.cscie97.store.test.TestDriver store.script > store.out
+ 1141  java -cp . com.cscie97.store.test.TestDriver store.script
+ 1142  cd com
+ 1143  cd cscie97/store/model
+ 1144  ls
+ 1145  rm *.class
+ 1146  cd ..
+ 1147  cd test
+ 1148  rm *.class
+ 1149  cd ..
+ 1150  ls
+ 1151  javac com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1152  java -cp . com.cscie97.store.test.TestDriver store.script
+ 1153  cd com/store
+ 1154  ls
+ 1155  wc -l *.java
+ 1156  cd com
+ 1157  cd cscie97
+ 1158  cd store/model
+ 1159  wc -l *.java
+ 1160  cd /home/evan
+ 1161  ls
+ 1162  cd cscie97_hw3
+ 1163  ls
+ 1164  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1165  java -cp . com.cscie97.store.test.TestDriver store_script_hw3.txt
+ 1166  java -cp . com.cscie97.store.test.TestDriver
+ 1167  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1168  java -cp . com.cscie97.store.test.TestDriver
+ 1169  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1170  java -cp . com.cscie97.store.test.TestDriver
+ 1171  java -cp . com.cscie97.store.test.TestDriver store_script_hw3.txt
+ 1172  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1173  java -cp . com.cscie97.store.test.TestDriver store_script_hw3.txt
+ 1174  java -cp . com.cscie97.store.test.TestDriver store_script_hw3.txt > store_script_hw3.out
+ 1175  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1176  java -cp . com.cscie97.store.test.TestDriver store_script_hw3.txt > store_script_hw3.out
+ 1177  ls
+ 1178  zip -r Evan_Imperato_Assignment3.zip .
+ 1179  cd ..
+ 1180  cd test
+ 1181  ls
+ 1182  unzip Evan_Imperato_Assignment3.zip
+ 1183  ls
+ 1184  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/test/*.java
+ 1185  java -cp . com.cscie97.store.test.TestDriver store.script
+ 1186  ls
+ 1187  cat /etc/passwd
+ 1188  cd test_hw4
+ 1189  ls
+ 1190  unzip Evan_Imperato_Assignment4.zip
+ 1191  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java
+ 1192  com/cscie97/store/authentication/*.java com/cscie97/store/test/*.java
+ 1193  cd ..
+ 1194  ls
+ 1195  cd cscie97_hw4
+ 1196  ls
+ 1197  zip -r Evan_Imperato_Assignment4.zip .
+ 1198  ls
+ 1199  sudo gnome-terminal
+ 1200  ls
+ 1201  cd cscie97_hw4
+ 1202  ls
+ 1203  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/authentication/*.java com/cscie97/store/test/*.java
+ 1204  java -cp . com.cscie97.store.test.TestDriver store.script
+ 1205  java -cp . com.cscie97.store.test.TestDriver store.script > store.script.out
+ 1206  java -cp . com.cscie97.store.test.TestDriver store.script
+ 1207  java -cp . com.cscie97.store.test.TestDriver store.script > store.script.out
+ 1208  sudo gnome-terminal
+ 1209  zip -r Evan_Imperato_Assignment4.zip .
+ 1210  ls
+ 1211  zip -r Evan_Imperato_Assignment4.zip .
+ 1212  ls
+ 1213  ls -a 
+ 1214  ls
+ 1215  rm Evan_Imperato_Assignment4.zip
+ 1216  cd /root/eclipse/jee-2019-06/eclipse
+ 1217  ./eclipse
+ 1218  ls
+ 1219  cd test_hw4
+ 1220  ls
+ 1221  unzip Evan_Imperato_Assignment4.zip
+ 1222  javac com/cscie97/store/controller/*.java com/cscie97/store/model/*.java com/cscie97/store/authentication/*.java com/cscie97/store/test/*.java
+ 1223  java -cp . com.cscie97.store.test.TestDriver store.script > store.script.out
+ 1224  ls
+ 1225  cd cscie97_hw5
+ 1226  zip -r Evan_Imperato_Assignment5.zip .
+ 1227  ls
+ 1228  cd cscie97
+ 1229  cd cscie97_hw1
+ 1230  ls
+ 1231  git status
+ 1232  cd ..
+ 1233  ls
+ 1234  cd test_java_sample
+ 1235  ls
+ 1236  unzip Evan_Imperato_Java_Sample.zi
+ 1237  unzip Evan_Imperato_Java_Sample.zip
+ 1238  javac com/cscie97/ledger/*.java com/cscie97/ledger/test/*.java
+ 1239  java -cp . com.cscie97.ledger.test.TestDriver ledger.script
+ 1240  python3
+ 1241  sudo apt-get update
+ 1242  sudo apt-get upgrade
+ 1243  sudo apt-get install python3-pip python3-dev
+ 1244  sudo apt-get install build-essential cmake git unzip pkg-config libopenblas-dev liblapack-dev
+ 1245  sudo apt-get install python-numpy python-scipy python- matplotlib
+ 1246  ➥ python-yaml
+ 1247  sudo apt-get install python-numpy python-scipy python- matplotlib python-yaml
+ 1248  sudo pip3 install matplotlib
+ 1249  sudo pip3 install python-scipy
+ 1250  sudo apt-get install python-numpy python-scipy python- matplotlib python-yaml
+ 1251  sudo apt-get install libhdf5-serial-dev python-h5py
+ 1252  sudo apt-get install graphviz
+ 1253  sudo pip install pydot-ng
+ 1254  sudo pip3 install pydot-ng
+ 1255  sudo apt-get install python-opencv
+ 1256  sudo pip3 install tensorflow
+ 1257  sudo pip3 install theano
+ 1258  cd keras
+ 1259  git clone https://github.com/fchollet/keras
+ 1260  cd keras
+ 1261  sudo python3 setup.py install
+ 1262  python3 examples/mnist_cnn.py
+ 1263  python3 examples/imdb.py
+ 1264  l
+ 1265  cd examples
+ 1266  ls
+ 1267  python3 addition_rnn.py
+ 1268  ls
+ 1269  python3 reuters_mlp_relu_vs_selu.py
+ 1270  cd keras
+ 1271  ls
+ 1272  cd example
+ 1273  cd examples
+ 1274  ls
+ 1275  python3 imdb_fasttext.py 
+ 1276  python3 imdb_fasttext_evan.py 
+ 1277  prof
+ 1278  gprof
+ 1279  opcontrol
+ 1280  python3
+ 1281  pip freeze
+ 1282  pip3 freeze
+ 1283  ls
+ 1284  cd nlpia
+ 1285  git clone https://github.com/totalgood/nlpia
+ 1286  pip3 install -e nlpia
+ 1287  conda
+ 1288  cd ..
+ 1289  ls
+ 1290  cd Anaconda_Evan
+ 1291  ls
+ 1292  /home/evan/Downloads/Anaconda3-2019.10-Linux-x86_64.sh Anaconda3-2019.10-Linux-x86_64.sh
+ 1293  cd ..
+ 1294  cd Downloads
+ 1295  ls
+ 1296  sha256sum Anaconda3-2019.10-Linux-x86_64.sh
+ 1297  cd ..
+ 1298  cd Anaconda_Evan
+ 1299  sha256sum Anaconda3-2019.10-Linux-x86_64.sh
+ 1300  bash ~/Downloads/Anaconda3-2019.10-Linux-x86_64.sh
+ 1301  pip3 install gensim
+ 1302  python3
+ 1303  ls
+ 1304  cd ..
+ 1305  ls
+ 1306  cd keras
+ 1307  ls
+ 1308  cd examples
+ 1309  ls
+ 1310  python3 addition_rnn.py
+ 1311  cd nlpia
+ 1312  cd src/nlpia
+ 1313  ls
+ 1314  cd book
+ 1315  ls
+ 1316  cd examples
+ 1317  ls
+ 1318  python3 ch02.py
+ 1319  python3 ch06.py
+ 1320  ls
+ 1321  cd nlpia
+ 1322  ls
+ 1323  conda install -y pip
+ 1324  conda env create -n nlpiaenv -f conda/environment.yml
+ 1325  env
+ 1326  cd nlpia
+ 1327  ls
+ 1328  conda env create -n nlpiaenv -f conda/environment.yml
+ 1329  conda activate nlpiaenv
+ 1330  pip install -e .
+ 1331  cd ..
+ 1332  ls
+ 1333  cd nlpia-bot
+ 1334  ls
+ 1335  bot --help
+ 1336  ls
+ 1337  cd nlpia-bot
+ 1338  ls
+ 1339  python3 setup.py
+ 1340  ./install.sh
+ 1341  sudo ./install.sh
+ 1342  sudo install.sh
+ 1343  sudo bash install.sh
+ 1344  conda
+ 1345  conda env create -n nlpia -f environment.yml
+ 1346  ls
+ 1347  bot
+ 1348  conda activate nlpia
+ 1349  cd home/evan
+ 1350  cd /
+ 1351  cd home/evan
+ 1352  ls
+ 1353  mkdir bot
+ 1354  cd bot
+ 1355  git clone git@github.com:nlpia/nlpia-bot
+ 1356  git clone https://github.com/nlpia/nlpia-bot.git
+ 1357  cd nlpia-bot
+ 1358  ls
+ 1359  conda env create -n nlpia -f environment.yml
+ 1360  conda activate nlpia
+ 1361  conda info --envs
+ 1362  conda activate nlpiaenv
+ 1363  pip3 install --editable .
+ 1364  sudo pip3 install --editable .
+ 1365  ls
+ 1366  sudo ./install.sh
+ 1367  sudo bash ./install.sh
+ 1368  sudo bash install.sh
+ 1369  ./install
+ 1370  ./install.sh
+ 1371  sudo ./install.sh
+ 1372  cd /bot/nlpia-bot
+ 1373  cd /home/evan
+ 1374  ls
+ 1375  cd /bot/nlpia-bot
+ 1376  cd bot
+ 1377  ls
+ 1378  cd nlpia-bot
+ 1379  ls
+ 1380  ./instal.sh
+ 1381  ./install.sh
+ 1382  ls
+ 1383  python3 setup.py
+ 1384  conda env create -n nlpia -f environment.yml
+ 1385  conda activate nlpia
+ 1386  conda activate nlpiaenv
+ 1387  pip3 install --editable .
+ 1388  stk -v
+ 1389  gtk -v
+ 1390  ls
+ 1391  cd react
+ 1392  ls
+ 1393  cd hello-react
+ 1394  ls
+ 1395  cd src
+ 1396  ls
+ 1397  rm -f *
+ 1398  sudo rm -f *
+ 1399  ls
+ 1400  emacs 
+ 1401  sudo emacs
+ 1402  emacs
+ 1403  sudo emacs
+ 1404  sudo vi
+ 1405  cd react
+ 1406  ls
+ 1407  cd hello-react
+ 1408  ls
+ 1409  npm i react-annotation-tool --save
+ 1410  sudo chown -R 1000:1000 "/home/evan/.npm"
+ 1411  npm i react-annotation-tool --save
+ 1412  sudo npm i react-annotation-tool --save
+ 1413  npm i react-annotation -S
+ 1414  sudo npm i react-annotation -S
+ 1415  sudo npm install react-picture-annotation
+ 1416  yarn
+ 1417  sudo apt install cmdtest
+ 1418  yarn add react-picture-annotation
+ 1419  history
+ 1420  history > annotation_install.txt
