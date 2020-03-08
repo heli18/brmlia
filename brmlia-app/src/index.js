@@ -30,6 +30,10 @@ class ImageUpload extends React.Component {
       var width = tiff.width();
       var height = tiff.height();
       let canvasImage = tiff.toCanvas();
+      var div = document.getElementById("output");
+      while(div.firstChild) {
+        div.removeChild(div.firstChild);
+        }
       document.getElementById("output").append(canvasImage);
       this.setState({
         file: file,
