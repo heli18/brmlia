@@ -21,15 +21,17 @@
   },
   "scripts": {
     "start": "PORT=2000 BROWSER=NONE react-scripts start",
-    "server": "nodemon server/app",
-    "wdio": "wdio",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test:coverage": "npm run test -- --coverage",
     "format": "prettier --write \"**/*.+(js|json|css)\"",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Brmlia/brmlia.git"
@@ -39,7 +41,7 @@
   "bugs": {
     "url": "https://github.com/Brmlia/brmlia/issues"
   },
-  "homepage": "https://github.com/Brmlia/brmlia#readme",
+  "homepage": "http://Brmlia.github.io/brmlia",
   "browserslist": [
     ">0.2%",
     "not dead",
