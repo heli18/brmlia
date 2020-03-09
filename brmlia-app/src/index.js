@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Tiff from 'tiff.js';
 import './index.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 class ImageUpload extends React.Component {
   constructor(props) {
     super(props);
@@ -48,17 +49,28 @@ class ImageUpload extends React.Component {
 
   render() {
     return (
-      <div className="previewComponent">
+      <div class="container">
+      <br></br>
+      <h1>Broad Multi-Layer Image Annotator</h1>
+       <br></br>
+       <br></br>
+       <br></br>
+      <div class="row">
+    <div class="col-sm">
+       <div class="form-group">
+      <div className="custom-file">
         <form onSubmit={(e)=>this._handleSubmit(e)}>
-          <input className="fileInput"
-            type="file"
+          <input type="file" class="custom-file-input" id="customFile"
             onChange={(e)=>this._handleImageChange(e)} />
-          <button className="submitButton"
-            type="submit"
-            onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
+            <label class="custom-file-label" for="customFile">Choose file</label>
         </form>
-        <div id="output" className="imgPreview">
+        <br></br>
+        <div id="output">
         </div>
+        </div>
+        </div>
+      </div>
+      </div>
       </div>
     )
   }
