@@ -1,10 +1,8 @@
 import React from "react";
-import { mainStyle, containerStyle, rowStyle, cardStyle, buttonGroup, container, cardAxisXY } from './style.js';
+import { mainStyle, containerStyle, rowStyle, cardStyle, buttonGroup, container } from './style.js';
 
-import { ButtonToggle,
+import {
   UncontrolledButtonDropdown,
-  UncontrolledDropdown,
-  ButtonDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -13,21 +11,14 @@ import { ButtonToggle,
   Col,
   ButtonGroup,
   Button,
-  UncontrolledPopover,
-  PopoverHeader,
-  PopoverBody,
   InputGroup,
   InputGroupAddon,
-  InputGroupText,
   Input,
   UncontrolledCollapse,
-  CardDeck,
   Card,
   CardTitle,
   CardImg,
   CardBody,
-  CardText,
-  Label
 } from 'reactstrap';
 
 class UI extends React.Component {
