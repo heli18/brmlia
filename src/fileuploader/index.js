@@ -5,9 +5,9 @@ class ImageUpload extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
+ 
       }
     }
-
     
     render() {
         const maxSize = 10485760;
@@ -23,7 +23,8 @@ class ImageUpload extends React.Component {
                 const isFileTooLarge = rejectedFiles.length > 0 && rejectedFiles[0].size > maxSize;
                 return (
                   <div {...getRootProps()}>
-                    <input {...getInputProps()} />
+                    <input  {...getInputProps()}
+                    />
                     {!isDragActive && "Upload"}
                     {isDragActive && !isDragReject && "Upload"}
                     {isDragReject && "File type not accepted, sorry!"}
