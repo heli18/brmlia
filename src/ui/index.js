@@ -1,4 +1,6 @@
 import React from "react";
+import Annotator from '../annotator/Annotator';
+
 import { mainStyle, containerStyle, rowStyle, cardStyle, buttonGroup, container } from './style.js';
 
 import {
@@ -35,6 +37,7 @@ class UI extends React.Component {
   };
 
   render() {
+
     return (
       <div className="main" style={mainStyle}>
         {console.log("Channels: " + this.state.channel1Selected
@@ -154,6 +157,7 @@ class UI extends React.Component {
                         <CardTitle> Axis XZ </CardTitle>
                       </CardBody>
                       <CardImg top width="100%" src={this.state.image1Src} alt="AxisXZ" />
+
                       <br>
                       </br>
                       <div className="slider">
@@ -170,7 +174,7 @@ class UI extends React.Component {
                       <CardBody>
                         <CardTitle> Image View </CardTitle>
                       </CardBody>
-                      <CardImg top width="100%" src={this.state.image1Src} alt="Img1" />
+                        <Annotator />
                       <br>
                       </br>
                       <div className="slider">
@@ -179,7 +183,9 @@ class UI extends React.Component {
                       </div>
                     </Card>
                   </div>
-                </Col>
+
+
+               </Col>
 
                 <Col xs="3">
                   <div className="card-axis-xz" style={cardStyle}>

@@ -64,4 +64,3 @@ export const card = {
   inverse: false,
   color: ""
 }
-
