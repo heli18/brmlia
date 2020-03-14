@@ -1,6 +1,7 @@
 import React from "react";
 import { mainStyle, containerStyle, rowStyle, cardStyle, buttonGroup, container } from './style.js';
-import Viewer from "../viewer/index.js"
+import Viewer from "../viewer/index.js";
+import ImageUpload from "../fileuploader/index.js";
 
 import {
   UncontrolledButtonDropdown,
@@ -21,6 +22,7 @@ import {
   CardImg,
   CardBody,
 } from 'reactstrap';
+import { ImageEdit } from "material-ui/svg-icons";
 
 class UI extends React.Component {
 
@@ -56,7 +58,7 @@ class UI extends React.Component {
               File
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem> Import </DropdownItem>
+              <DropdownItem><ImageUpload> </ImageUpload> </DropdownItem>
               <DropdownItem> Export </DropdownItem>
             </DropdownMenu>
           </UncontrolledButtonDropdown>
