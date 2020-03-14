@@ -57,4 +57,3 @@ export const Mesh = ({ brightness, contrast, image }) => {
         </mesh>
     );
 }
-//export { Mesh } from './Mesh';
