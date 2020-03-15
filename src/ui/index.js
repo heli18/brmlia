@@ -1,5 +1,7 @@
 import React from "react";
 import { mainStyle, containerStyle, rowStyle, cardStyle, buttonGroup, container } from './style.js';
+import Viewer from "../viewer/index.js";
+import ImageUpload from "../fileuploader/index.js";
 
 import {
   UncontrolledButtonDropdown,
@@ -20,6 +22,7 @@ import {
   CardImg,
   CardBody,
 } from 'reactstrap';
+import { ImageEdit } from "material-ui/svg-icons";
 
 class UI extends React.Component {
 
@@ -31,8 +34,13 @@ class UI extends React.Component {
     annot2Selected: false,
     annot3Selected: false,
     annot4Selected: false,
-    image1Src: require('./assets/images/brom.jpeg')
+    image1Src: require('./assets/images/brom.jpeg'),
+    image1Zoom: 0
   };
+
+  handleSliderChange = (e, key) => {
+    e.persist();
+  }
 
   render() {
     return (
@@ -50,7 +58,7 @@ class UI extends React.Component {
               File
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem> Import </DropdownItem>
+              <DropdownItem><ImageUpload> </ImageUpload> </DropdownItem>
               <DropdownItem> Export </DropdownItem>
             </DropdownMenu>
           </UncontrolledButtonDropdown>
@@ -170,13 +178,9 @@ class UI extends React.Component {
                       <CardBody>
                         <CardTitle> Image View </CardTitle>
                       </CardBody>
-                      <CardImg top width="100%" src={this.state.image1Src} alt="Img1" />
+                      <Viewer imageSrc={this.state.image1Src}/>
                       <br>
                       </br>
-                      <div className="slider">
-                        <label htmlFor="range1"> Zoom </label>
-                        <input type="range" className="custom-range" id="customRange1" />
-                      </div>
                     </Card>
                   </div>
                 </Col>
