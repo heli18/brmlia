@@ -79,18 +79,19 @@ jobs:
           cache-version: v2
           steps:
             - run: ls -all
-            - run: echo 'SKIP_PREFLIGHT_CHECK=true' >> .env # FIXME: wtf?
+            # - run: echo 'SKIP_PREFLIGHT_CHECK=true' >> .env # for vers. problems
             - run: npm run 'test:coverage'
       - codecov/upload:
           path: coverage
 
-  # Doesn't currently do anything
+  # Deploy github pages on changes to master
   deploy:
     executor: node/default
     steps:
       - *attach_workspace
       - checkout
       - node/with-cache:
+          cache-version: v2
           steps:
             - run:
                 name: Deploying app to gh-pages
