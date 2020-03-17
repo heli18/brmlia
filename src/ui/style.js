@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const mainStyle = {
   overflowY: 'scroll',
@@ -16,52 +16,51 @@ export const rowStyle = {
   position: 'relative',
 };
 export const cardStyle = {
-  flex: 0.10,
+  flex: 0.1,
   position: 'relative',
 };
 
 export const buttonGroup = {
-  size: "sm",
-  vertical: false
-}
+  size: 'sm',
+  vertical: false,
+};
 
 export const mainView = {
   flex: 1,
   flexDirection: 'column',
-  justifyContent: 'center'
-}
+  justifyContent: 'center',
+};
 
 export const innerView = {
   flex: 0.8,
-  flexDirection: 'row'
-}
+  flexDirection: 'row',
+};
 
 export const container = {
-  fluid: true
+  fluid: true,
   // fluid: "sm", "md", "lg", "xl", true, false
-}
+};
 
 export const row = {
   noGutters: false,
   form: false,
-  xs: "2"
+  xs: '2',
   // sm: "",
   // md: "",
   // lg: "",
   // xl: ""
-}
+};
 
 export const col = {
-  xs: "2"
+  xs: '2',
   // sm: "",
   // md: "",
   // lg: "",
   // xl: ""
-}
+};
 
 export const card = {
-  tag: "",
+  tag: '',
   inverse: false,
-  color: ""
-}
-
+  color: '',
+};
