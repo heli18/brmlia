@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Slider from "../utils/index.js"
+import "../styles.css"
 
 
 class Viewer extends Component {
@@ -49,8 +50,6 @@ class Viewer extends Component {
   }
 
   updateZoomValue(value) {
-    this.state.zoomPct = value;
-
     if (this.state.zoomPct !== this.state.prevPct) {
       this.state.prevPct = this.state.zoomPct;
       this.state.zoomPct = value/100;
@@ -77,10 +76,10 @@ class Viewer extends Component {
       maxScale,
       step
     } = this.state.zpp;
-    const { imageSrc }  = this.props;
+    const { imageSrc, imageWidth }  = this.props;
     var sliderValue = this.sliderValue;
     return (
-      <div>
+      <div className="viewer-wrapper">
         <TransformWrapper
           defaultScale={1}
           defaultPositionX={0}
@@ -126,23 +125,23 @@ class Viewer extends Component {
           {this.updateZoomValue(scale)}
           <React.Fragment>
             <TransformComponent>
-              <img src={imageSrc} alt="viewer" />
+              <img src={imageSrc} alt="viewer" width={imageWidth}/>
             </TransformComponent>
             <span className="badge badge-primary">
-              x : {positionX}px
+              x : {Number(positionX).toFixed(0)}px
             </span>
             <span className="badge badge-primary">
-              y : {positionY}px
+              y : {Number(positionY).toFixed(0)}px
             </span>
             <span className="badge badge-primary">
-              Scale : {scale*100}%
+              Scale : {Number(scale*100).toFixed(0)}%
             </span>
           </React.Fragment>
           </div>
           )
         }
         </TransformWrapper>
-        <Slider sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
+        <Slider width="40%" sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
       </div>
     );
   }
