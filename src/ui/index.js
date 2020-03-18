@@ -10,6 +10,7 @@ import {
   Row,
   Col,
 } from 'reactstrap';
+import { ImageEdit } from "material-ui/svg-icons";
 
 class UI extends React.Component {
 
