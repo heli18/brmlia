@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
-import create from 'zustand';
-import * as THREE from 'three';
+import { fApi, uApi } from '../utils/index.js'
 
 const fragmentShader = `
   uniform sampler2D image;
@@ -29,60 +28,9 @@ const vertexShader = `
   }
 `;
 
-export const createTexture = (image) => {
-  return new THREE.TextureLoader().load(image);
-}
-
-const initState = {
-  uniforms: {
-    brightness: {
-      value: '0.0'
-    },
-    contrast: {
-      value: '0.0'
-    },
-    image: {
-      value: createTexture(require('../ui/assets/images/brom.jpeg'))
-    }
-  },
-  texture: null,
-  brightness: '0.0',
-}
-
-export const [useStore, api] = create ( set => ( {
-  ...initState,
-  update: (brightness, contrast, image) => set ( state => ({
-    ...state,
-    uniforms: {
-      ...state.uniforms,
-      brightness: {
-        ...state.uniforms.brightness,
-        value: brightness
-      },
-      contrast: {
-        ...state.uniforms.contrast,
-        value: contrast
-      },
-      image: {
-        ...state.uniforms.image,
-      },
-    },
-    texture: image,
-    brightness: brightness
-  })),
-}))
-
 function Image() {
 
   const ref = useRef()
-  const {uniforms, texture, brightness} = useStore(state => state)
-
-  console.log("uniforms"); console.log(uniforms)
-  // console.log("texture"); console.log(texture)
-  console.log("brightness"); console.log(brightness)
-
-  // todo: set uniforms.image.value to state.texture
-  // todo: force update render
 
   return (
     <mesh ref={ref} scale={[1.0, 1.0, 1.0]}>
@@ -91,22 +39,15 @@ function Image() {
         attach="material"
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
-        uniforms={uniforms}
+        uniforms={uApi.getState().uniforms}
       >
       </shaderMaterial>
     </mesh>
   )
 }
 
-export const Mesh = ({ brightness, contrast, image }) => {
+export const Mesh = () => {
     return (
       <Image />
     );
 }
-
-export const withStore = (Component: any) => {
-  return (props: any) => {
-    const store = useStore();
-    return <Component store={store} {...props}/>;
-  };
-};

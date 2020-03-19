@@ -9,7 +9,7 @@ import {
 } from 'reactstrap';
 
 import ImageCanvas from '../../imagecanvas/ImageCanvas.js'
-import { withStore } from '../../imagecanvas/Mesh.js'
+import { withUniformStore } from '../../utils/index.js'
 import Slider from "./slider.js"
 
 class Channel extends React.Component {
@@ -21,6 +21,14 @@ class Channel extends React.Component {
       contrast: '0.0',
     }
   }
+
+  api = this.props.api;
+  update() {
+    if (this.state.slider.brightness !== this.api.getState().uniforms.brightness.value){
+      this.api.setState( {uniforms: {brightness: {value: this.state.slider.brightness}} })
+    }
+  }
+
 
   updateSelection = () => {
     this.setState(prevState => ({
@@ -37,19 +45,22 @@ class Channel extends React.Component {
         brightness: value
       }
     }));
-    this.props.store.update(this.state.slider.brightness, this.state.slider.contrast, texture);
+
+
+    this.update()
+    // this.props.store.update(this.state.slider.brightness, this.state.slider.contrast, texture);
     console.log("sliderValueBr() - ch br: " + this.state.slider.brightness + " ch ct: " + this.state.slider.contrast);
   }
 
   sliderValueCt(value) {
-    const texture = this.props.imageSrc;
-    this.setState( prevState => ({
-      slider: {
-        ...prevState.slider,
-        contrast: value
-      }
-    }));
-    this.props.store.update(this.state.slider.brightness, this.state.slider.contrast, texture);
+  //   const texture = this.props.imageSrc;
+  //   this.setState( prevState => ({
+  //     slider: {
+  //       ...prevState.slider,
+  //       contrast: value
+  //     }
+  //   }));
+  //   this.props.store.update(this.state.slider.brightness, this.state.slider.contrast, texture);
     console.log("sliderValueCt() - ch br: " + this.state.slider.brightness + " ch ct: " + this.state.slider.contrast);
   }
 
@@ -97,4 +108,4 @@ class Channel extends React.Component {
   }
 }
 
-export default withStore(Channel);
+export default withUniformStore(Channel);
