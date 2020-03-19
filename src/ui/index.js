@@ -10,6 +10,8 @@ import {
   Row,
   Col,
 } from 'reactstrap';
+import {ImageUpload} from "../fileuploader/index.js";
+
 
 class UI extends React.Component {
 
@@ -44,6 +46,8 @@ class UI extends React.Component {
             </Col>
           </Row>
         </Container>
+
+        <ImageUpload/>
       </div>
     );
   }

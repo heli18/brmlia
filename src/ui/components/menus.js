@@ -13,6 +13,8 @@ import {
   Input,
 } from 'reactstrap';
 
+import {ImageUpload} from "../../fileuploader/index.js";
+
 class AxesViewer extends React.Component {
 
   render() {
@@ -23,6 +25,7 @@ class AxesViewer extends React.Component {
             File
           </DropdownToggle>
           <DropdownMenu>
+            <DropdownItem> <ImageUpload/> </DropdownItem>
             <DropdownItem> Export </DropdownItem>
           </DropdownMenu>
         </UncontrolledButtonDropdown>
