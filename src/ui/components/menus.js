@@ -14,10 +14,12 @@ import {
 } from 'reactstrap';
 
 import {ImageUpload} from "../../fileuploader/index.js";
+import {withFileStore} from "../../utils/index.js";
 
-class AxesViewer extends React.Component {
+class Menus extends React.Component {
 
   render() {
+
     return (
       <ButtonGroup size={buttonGroup.size} vertical={buttonGroup.vertical} style={buttonGroup} >
         <UncontrolledButtonDropdown>
@@ -25,7 +27,7 @@ class AxesViewer extends React.Component {
             File
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem> <ImageUpload/> </DropdownItem>
+            <DropdownItem> <ImageUpload name="dropdown-image-upload"/> </DropdownItem>
             <DropdownItem> Export </DropdownItem>
           </DropdownMenu>
         </UncontrolledButtonDropdown>
@@ -78,9 +80,12 @@ class AxesViewer extends React.Component {
             <DropdownItem> 2 </DropdownItem>
           </DropdownMenu>
         </UncontrolledButtonDropdown>
+
+
+        <Button outline color="primary" className="image-upload-btn"> <ImageUpload name="Import Image" store={this.props.store} api={this.props.api} />  </Button>
       </ButtonGroup>
     );
   }
 }
 
-export default AxesViewer;
+export default withFileStore(Menus);

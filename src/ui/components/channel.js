@@ -10,7 +10,7 @@ import {
 
 import ImageCanvas from '../../imagecanvas/ImageCanvas.js'
 import { withStore } from '../../imagecanvas/Mesh.js'
-import Slider from "../../utils/index.js"
+import Slider from "./slider.js"
 
 class Channel extends React.Component {
 

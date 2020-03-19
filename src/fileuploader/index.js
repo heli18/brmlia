@@ -32,22 +32,21 @@ const img = {
   height: '100%'
 };
 
-
 export function ImageUpload(props) {
   const [files, setFiles] = useState([]);
   const {getRootProps, getInputProps} = useDropzone({
     accept: 'image/*',
     onDrop: acceptedFiles => {
-      setFiles(acceptedFiles.map(file => Object.assign(file, {
-        preview: URL.createObjectURL(file)
-      })));
+      setFiles(acceptedFiles.map(file =>
+        Object.assign(file, {
+          preview: URL.createObjectURL(file)
+        })
+      ));
     }
   });
 
   const thumbs = files.map(file => (
     <div style={thumb} key={file.name}>
-      {console.log("preview")}
-      {console.log(file.preview)}
       <div style={thumbInner}>
         <img
           src={file.preview}
@@ -57,6 +56,10 @@ export function ImageUpload(props) {
     </div>
   ));
 
+  const update = files.map(file => (
+    props.api.setState( { file: {name: file.name, image: file.preview, style: img}})
+  ));
+
   useEffect(() => () => {
     // Make sure to revoke the data uris to avoid memory leaks
     files.forEach(file => URL.revokeObjectURL(file.preview));
@@ -64,18 +67,15 @@ export function ImageUpload(props) {
 
   return (
     <section className="container">
-      {console.log("fileuploader")}
       <div {...getRootProps({className: 'dropzone'})}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
-
-        {console.log("fileuploader input")}
+        <p> {props.name} </p>
+       { update }
       </div>
       <aside style={thumbsContainer}>
         {thumbs}
-        {console.log("fileuploader aside")}
-        {console.log(files)}
       </aside>
     </section>
   );
 }
+

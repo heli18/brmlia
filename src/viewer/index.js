@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import Slider from "../utils/index.js"
+import Slider from "../ui/components/slider.js"
 import "../styles.css"
 
 
@@ -33,7 +33,8 @@ class Viewer extends Component {
       minScale: 0.5,
       maxScale: 8,
       step: 10,
-      updated: false
+      updated: false,
+      scale: 1
     },
     slider: {
       sync: false,
@@ -74,10 +75,15 @@ class Viewer extends Component {
       limitsOnWheel,
       minScale,
       maxScale,
-      step
+      step,
+      scale
     } = this.state.zpp;
-    const { imageSrc, imageWidth }  = this.props;
+    const { imageSrc, imageWidth, zoom }  = this.props;
     var sliderValue = this.sliderValue;
+    if (this.state.zoomPct == "0.01") {
+      this.state.zoomPct = scale;
+    }
+
     return (
       <div className="viewer-wrapper">
         <TransformWrapper
@@ -141,7 +147,7 @@ class Viewer extends Component {
           )
         }
         </TransformWrapper>
-        <Slider label="Zoom" width="40%" min="50" max="800" step="10" initial="0" multiplier="1" sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
+        <Slider label="Zoom" width="40%" min="50" max="800" step="10" initial={this.state.zoomPct} multiplier="1" sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
       </div>
     );
   }
