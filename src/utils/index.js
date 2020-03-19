@@ -4,11 +4,10 @@ import "./styles.css";
 class Slider extends Component {
 
   initSlider = {
-    label: "Zoom",
     initial: 0,
-    min: 50,
-    max: 800,
-    step: 10,
+    min: 0,
+    max: 0,
+    step: 0,
     value: 0
   };
 
@@ -51,15 +50,23 @@ class Slider extends Component {
   };
 
   render() {
-    let slider = this.state.slider;
+    const slider = this.state.slider;
+    const {
+      label,
+      min,
+      max,
+      initial,
+      step,
+      multiplier
+    } = this.props;
 
     return (
       <div className="slider-settings">
-        <span>{slider.label}</span> <br></br>
-        <span>{slider.min} </span>
-        <input type="range" className="slider" value={slider.value || slider.initial} id="customRange1" initial={slider.initial} min={slider.min} max={slider.max} step={slider.step} onChange={e=>this.handleSliderChange(e)} />
-        <span> {slider.max}</span>
-        <span> {slider.value}%</span>
+        <span>{label}</span> <br></br>
+        <span>{min} </span>
+        <input type="range" className="slider" value={slider.value || initial} id="customRange1" initial={initial} min={min} max={max} step={step} onChange={e=>this.handleSliderChange(e)} />
+        <span> {max}</span>
+        <span> {slider.value * multiplier}%</span>
       </div>
     );
   }

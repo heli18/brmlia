@@ -10,7 +10,6 @@ import {
   Row,
   Col,
 } from 'reactstrap';
-import { ImageEdit } from "material-ui/svg-icons";
 
 class UI extends React.Component {
 
@@ -18,10 +17,6 @@ class UI extends React.Component {
     image1Src: require('./assets/images/brom.jpeg'),
     image1Zoom: 0
   };
-
-  handleSliderChange = (e, key) => {
-    e.persist();
-  }
 
   render() {
     return (

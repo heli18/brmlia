@@ -2,16 +2,18 @@ import React from 'react';
 import { Canvas } from 'react-three-fiber';
 import { Mesh } from '../imagecanvas/Mesh';
 import Grid from '@material-ui/core/Grid';
-import { useStyles } from './ImageCanvas.css';
 
+class ImageCanvas extends React.Component {
 
-export const ImageCanvas = ({ brightness, contrast, image }) => {
-    const styles = useStyles();
-    return
-    (<Grid container={true}>
-        <Canvas className={styles.canvas}>
-            <Mesh brightness = {brightness} contrast={contrast} image ={image} />
+  render() {
+    return (
+      <Grid container={true}>
+        <Canvas invalidateFrameloop className='image-canvas'>
+            <Mesh brightness = {this.props.brightness} contrast={this.props.contrast} image ={this.props.image} />
         </Canvas>
-    </Grid>)
-};
-export { ImageCanvas } from './ImageCanvas';
+      </Grid>
+    );
+  }
+}
+
+export default ImageCanvas;

@@ -22,7 +22,8 @@
     "react-zoom-pan-pinch": "^1.6.1",
     "reactstrap": "^8.4.1",
     "styled-components": "^5.0.1",
-    "three": "^0.114.0"
+    "three": "^0.114.0",
+    "zustand": "^2.2.3"
   },
   "scripts": {
     "start": "PORT=2000 react-scripts start",

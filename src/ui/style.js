@@ -1,5 +1,3 @@
-import React from "react";
-
 export const mainStyle = {
   overflowY: 'scroll',
   overflowX: 'scroll',
@@ -62,6 +60,11 @@ export const card = {
   width: '100%',
   fluid: true,
   fontSize: "12px"
+}
+
+export const cardBody = {
+  width: '85%',
+  height: '100%'
 }
 
 export const mainImg = {

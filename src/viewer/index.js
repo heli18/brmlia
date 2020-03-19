@@ -141,7 +141,7 @@ class Viewer extends Component {
           )
         }
         </TransformWrapper>
-        <Slider width="40%" sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
+        <Slider label="Zoom" width="40%" min="50" max="800" step="10" initial="0" multiplier="1" sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
       </div>
     );
   }
