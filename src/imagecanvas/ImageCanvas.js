@@ -2,15 +2,21 @@ import React from 'react';
 import { Canvas } from 'react-three-fiber';
 import { Mesh } from '../imagecanvas/Mesh';
 import Grid from '@material-ui/core/Grid';
-import { createTexture } from './imageStore.js'
+import { createTexture, createTextureFromTiff } from './imageStore.js'
 import { fApi, uApi } from '../utils/index.js'
 
 class ImageCanvas extends React.Component {
 
   updateForFile(state) {
     if (uApi.getState().name !== state.file.name) {
-      let texture = createTexture(state.file.image)
-      uApi.setState( {name: state.file.name, uniforms: {image: { value: texture}}} )
+      if(state.file.type === 'image/tiff'){
+        console.log('tiff detected ==> converting to canvas');
+        let texture = createTextureFromTiff(state.file.image);
+        uApi.setState( {name: state.file.name, uniforms: {image: { value: texture}}} )
+      }else{
+        let texture = createTexture(state.file.image);
+        uApi.setState( {name: state.file.name, uniforms: {image: { value: texture}}} )
+      }
       this.forceUpdate();
     }
   }

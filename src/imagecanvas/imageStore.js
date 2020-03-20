@@ -1,7 +1,30 @@
 import create from 'zustand';
 import * as THREE from 'three';
+import Tiff from 'tiff.js';
+import UTIF from 'utif';
 
 export const createTexture = (image) => {
+  return new THREE.TextureLoader().load(image);
+}
+
+export const createTextureFromTiff = (image) => {
+
+  async function fetchImageBuffer(image) {
+    const blob = new Blob([image]);
+    return await blob.arrayBuffer();
+  }
+  fetchImageBuffer().then((blob) => {
+    const byteLength = blob.byteLength;
+    console.log(byteLength);
+   //let tiff = Tiff({buffer: blob});
+   //let canvas = tiff.toCanvas();
+   //return canvas;
+  })
+  .catch((e) =>
+    console.log(e)
+  );
+  const canv = fetchImageBuffer(image);
+
   return new THREE.TextureLoader().load(image);
 }
 
@@ -14,12 +37,13 @@ const initState = {
       value: '0.0'
     },
     image: {
-      value: createTexture(require('../ui/assets/images/brom.jpeg'))
+      value: ''
     }
   },
   texture: null,
   brightness: '0.0',
-  name: ""
+  name: '',
+  type: ''
 }
 
 export const [useUniformStore, uniApi] = create ( set => ( {

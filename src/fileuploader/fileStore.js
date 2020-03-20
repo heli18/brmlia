@@ -9,13 +9,14 @@ export const initState = {
 
 export const [useFileStore, fileApi] = create ( set => ({
   ...initState,
-  upload: (name, image, style) => set ( state => ({
+  upload: (name, image, style, type) => set ( state => ({
     ...state,
     file: {
       ...state.file,
       name: name,
       image: image,
-      style: style
+      style: style,
+      type: type
     },
   })),
 }))

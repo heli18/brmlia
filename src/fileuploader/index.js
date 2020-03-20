@@ -35,7 +35,7 @@ const img = {
 export function ImageUpload(props) {
   const [files, setFiles] = useState([]);
   const {getRootProps, getInputProps} = useDropzone({
-    accept: 'image/*',
+    accept: 'image/png, image/tiff',
     onDrop: acceptedFiles => {
       setFiles(acceptedFiles.map(file =>
         Object.assign(file, {
@@ -51,13 +51,14 @@ export function ImageUpload(props) {
         <img
           src={file.preview}
           style={img}
+          type={file.type}
         />
       </div>
     </div>
   ));
 
   const update = files.map(file => (
-    props.api.setState( { file: {name: file.name, image: file.preview, style: img}})
+    props.api.setState( { file: {name: file.name, image: file.preview, style: img, type: file.type}})
   ));
 
   useEffect(() => () => {
