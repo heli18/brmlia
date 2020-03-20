@@ -22,7 +22,8 @@ function Scene() {
   const material = useRef()
 
   let t = 0
-  useFrame(() => (material.current.uniforms.u_time.value = t = (t + 0.01) % 1))
+  useFrame(() => {material.current.uniforms.u_time.value = t = (t + 0.01) % 1; console.log("Test::useFrame() - t:", t)}
+  )
 
   return (
     <mesh>

@@ -1,6 +1,6 @@
 
 import React from "react";
-import TestFunctionWrapper from "./TestFunctionWrapper.js";
+import TestFunctionWrapper from "../TestFunctionWrapper.js";
 
 
 export function TestFunctionWrapperWrapper() {
