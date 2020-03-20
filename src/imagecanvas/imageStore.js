@@ -1,6 +1,6 @@
 import create from 'zustand';
 import * as THREE from 'three';
-import Tiff from 'tiff.js';
+//import Tiff from 'tiff.js';
 import UTIF from 'utif';
 
 export const createTexture = (image) => {
@@ -8,24 +8,47 @@ export const createTexture = (image) => {
 }
 
 export const createTextureFromTiff = (image) => {
-
+  
+  //use async and promises to load the blob into a buffer, then decode it 
+  //into an RGBA Uint8Array. Load the array into a DataTexture
   async function fetchImageBuffer(image) {
-    const blob = new Blob([image]);
-    return await blob.arrayBuffer();
+    // function input 'image' is already a blob,
+    // but it was not working without explicitly creating the Blob...
+    const blob = new Blob([image]); 
+    const arrayBuffer = await new Response(blob).arrayBuffer();
+    return arrayBuffer;
   }
   fetchImageBuffer().then((blob) => {
     const byteLength = blob.byteLength;
     console.log(byteLength);
-   //let tiff = Tiff({buffer: blob});
-   //let canvas = tiff.toCanvas();
-   //return canvas;
+    if(byteLength > 0){
+      let ifds = UTIF.decode(blob);
+      UTIF.decodeImage(blob, ifds[0])
+      let rgba = UTIF.toRGBA8(ifds[0]);  // Uint8Array with RGBA pixels
+      //console.log("WIDTH: " + ifds[0].width, "HEIGHT: " + ifds[0].height, ifds[0]);
+      return rgba;
+    }
   })
   .catch((e) =>
     console.log(e)
   );
-  const canv = fetchImageBuffer(image);
 
-  return new THREE.TextureLoader().load(image);
+  
+  const canv = fetchImageBuffer(image); 
+  Promise.resolve(canv).then(function(canv) {
+    console.log('Uint8Array with RGBA pixel length: ' + canv.byteLength); 
+    // use DataTexture to load the RGBA Uint8Array into a texture
+    // https://threejs.org/docs/index.html#api/en/textures/DataTexture
+    // TODO: Get the actual height and width of the image for tiff spec
+
+    let dataView = new DataView(canv, 0, 28);
+    let width = 512; //dataView.getInt32(16);
+    let height = 512; //dataView.getInt32(20);
+    let texture = new THREE.DataTexture( canv, width, height, THREE.RGBFormat );
+    return texture;
+  }, function(canv) {
+  });
+
 }
 
 const initState = {
