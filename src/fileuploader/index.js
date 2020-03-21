@@ -100,6 +100,7 @@ export function ImageUpload(props) {
         />
       </div>
     </div>
+  ));
 
   const update = files.map(file => {
     if (isValidFile(file.name)) {

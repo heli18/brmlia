@@ -2,7 +2,6 @@ import React from 'react';
 import { Canvas } from 'react-three-fiber';
 import Grid from '@material-ui/core/Grid';
 import Mesh from './Mesh';
-import { createTexture } from './imageStore.js'
 import { canvasStyle } from '../ui/style.js'
 import { createTexture, createTextureFromTiff } from './imageStore.js'
 import { fApi, uApi } from '../utils/index.js'
