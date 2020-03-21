@@ -1,7 +1,8 @@
 import React from 'react';
 import { fApi, uApi } from '../utils/index.js'
 
-export function updateBrightness(value) {
+export function updateBrightness(value, channel) {
+  // todo: update for individual channels
   if (uApi.getState().uniforms.brightness) {
     if (value !== uApi.getState().uniforms.brightness.value){
       uApi.setState( prevState => ({
@@ -21,7 +22,8 @@ export function updateBrightness(value) {
   return false;
 }
 
-export function updateContrast(value) {
+export function updateContrast(value, channel) {
+  // todo: update for individual channels
   if (uApi.getState().uniforms.contrast) {
     if (value !== uApi.getState().uniforms.contrast.value){
       uApi.setState( prevState => ({

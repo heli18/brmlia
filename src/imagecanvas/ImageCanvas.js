@@ -3,14 +3,15 @@ import { Canvas } from 'react-three-fiber';
 import Grid from '@material-ui/core/Grid';
 import Mesh from './Mesh';
 import { createTexture } from './imageStore.js'
-import { fApi, uApi } from '../utils/index.js'
+import { withStore } from '../utils/index.js'
+import { canvasStyle } from '../ui/style.js'
 
 class ImageCanvas extends React.Component {
 
   updateForFile(state) {
-    if (uApi.getState().name !== state.file.name) {
+    if (this.props.uApi.getState().name !== state.file.name) {
       let texture = createTexture(state.file.image);
-      uApi.setState( prevState => ({
+      this.props.uApi.setState( prevState => ({
         ...prevState,
         name: state.file.name,
         uniforms: {
@@ -28,21 +29,21 @@ class ImageCanvas extends React.Component {
   }
 
   render() {
-    fApi.subscribe(state =>  {
+    this.props.fApi.subscribe(state =>  {
       this.updateForFile(state);
     })
-    uApi.subscribe(state =>  {
+    this.props.uApi.subscribe(state =>  {
       this.updateForControls(state);
     })
 
     return (
-      <Grid container={true}>
-        <Canvas invalidateFrameloop className='image-canvas'>
-            <Mesh />
+      <div class="image-canvas-container" style={canvasStyle}>
+        <Canvas className='image-canvas'>
+          <Mesh />
         </Canvas>
-      </Grid>
+      </div>
     );
   }
 }
 
-export default ImageCanvas;
+export default withStore(ImageCanvas);

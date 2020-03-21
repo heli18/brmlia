@@ -1,6 +1,7 @@
 import React, { useRef, useMemo } from 'react';
 import { fApi, uApi } from '../utils/index.js'
 import {useFrame} from 'react-three-fiber'
+import '../styles.css'
 
 const fragmentShader = `
   uniform sampler2D image;
@@ -43,7 +44,7 @@ function Mesh() {
   useFrame(state => {
     material.current.uniforms.brightness.value = uApi.getState().uniforms.brightness.value;
     material.current.uniforms.contrast.value = uApi.getState().uniforms.contrast.value;
-    console.log("frame updated to br: " , material.current.uniforms.brightness.value, " ct: " , material.current.uniforms.contrast.value )
+    material.current.uniforms.image.value = uApi.getState().uniforms.image.value;
   })
 
   return (

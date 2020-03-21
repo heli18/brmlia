@@ -30,19 +30,19 @@ class Channel extends React.Component {
   }
 
   sliderValueBr(value) {
-    updateBrightness(value)
+    updateBrightness(value, this.props.ch)
   }
 
   sliderValueCt(value) {
-    updateContrast(value)
+    updateContrast(value, this.props.ch)
   }
 
   resetBrightness() {
-    updateBrightness('0.0');
+    updateBrightness('0.0'), this.props.ch;
   }
 
   resetContrast() {
-    updateContrast('0.0');
+    updateContrast('0.0'), this.props.ch;
   }
 
   render() {
@@ -58,10 +58,10 @@ class Channel extends React.Component {
         <Button className="viewBtn" outline color="secondary" id={`view${this.props.ch}`}>
           View
         </Button>
-        <UncontrolledCollapse toggler={`#view${this.props.ch}`}>
+       <UncontrolledCollapse toggler={`#view${this.props.ch}`}>
           <Card style={card} >
             <CardBody style={cardBody} >
-              <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram"/>
+              <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram" height="100px"/>
               "Insert Look up table here"
               <br>
               </br>
@@ -89,7 +89,7 @@ class Channel extends React.Component {
               </div>
             </CardBody>
           </Card>
-        </UncontrolledCollapse>
+       </UncontrolledCollapse>
       </div>
     );
   }

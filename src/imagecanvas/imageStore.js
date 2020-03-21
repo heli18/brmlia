@@ -6,6 +6,7 @@ export const createTexture = (image) => {
 }
 
 const initState = {
+  // todo: individual uniforms for separate channels
   uniforms: {
     brightness: {
       value: '0.0'

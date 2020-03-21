@@ -74,3 +74,9 @@ export const mainImg = {
 export const axesImg = {
   width: '100%'
 }
+
+export const canvasStyle = {
+  position: 'center',
+  height: '100px',
+  width: '88px',
+}
