@@ -17,7 +17,7 @@ class AxesViewer extends React.Component {
           <Card style={card}>
             <CardBody>
               <CardTitle> Axis XY </CardTitle>
-              <Viewer imageSrc={this.props.imageSrc} imageWidth={axesImg.width}/>
+              <Viewer imageWidth={axesImg.width}/>
             </CardBody>
           </Card>
         </div>
@@ -27,7 +27,7 @@ class AxesViewer extends React.Component {
           <Card style={card}>
             <CardBody>
               <CardTitle> Axis YZ </CardTitle>
-              <Viewer imageSrc={this.props.imageSrc} imageWidth={axesImg.width}/>
+              <Viewer imageWidth={axesImg.width}/>
             </CardBody>
           </Card>
         </div>
@@ -37,7 +37,7 @@ class AxesViewer extends React.Component {
           <Card style={card}>
             <CardBody>
               <CardTitle> Axis XZ </CardTitle>
-              <Viewer imageSrc={this.props.imageSrc} imageWidth={axesImg.width}/>
+              <Viewer imageWidth={axesImg.width}/>
             </CardBody>
           </Card>
         </div>

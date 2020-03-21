@@ -4,8 +4,6 @@ import MainViewer from "./components/mainViewer.js";
 import AxesViewer from "./components/axesViewer.js";
 import AnnotatorViewer from "./components/annotatorViewer.js";
 import Menus from "./components/menus.js";
-import create from 'zustand';
-import {withFileStore} from "../utils/index.js";
 
 import {
   Container,
@@ -14,31 +12,8 @@ import {
 } from 'reactstrap';
 
 class UI extends React.Component {
-
-  state = {
-    image1Src: require('./assets/images/brom.jpeg'),
-    image1Zoom: 0,
-    image1Name: "",
-    image1Style: {}
-  };
-
-  update(state) {
-    if (this.state.image1Name !== state.file.name) {
-      this.state.image1Name = state.file.name
-      this.state.image1Src = state.file.image
-      this.state.image1Style = state.file.style
-      this.forceUpdate();
-    }
-  }
-
   render() {
-
-    const sub = this.props.api.subscribe(state =>  {
-      this.update(state);
-    })
-
     return (
-
       <div className="main" style={mainStyle}>
       {console.log("main store")}
         <Menus />
@@ -52,15 +27,15 @@ class UI extends React.Component {
         <Container style={container}>
           <Row style={rowStyle}>
             <Col xs="3">
-              <AxesViewer imageSrc={this.state.image1Src} imageStyle={this.state.image1Style}/>
+              <AxesViewer />
             </Col>
 
             <Col xs="6">
-              <MainViewer imageSrc={this.state.image1Src} imageStyle={this.state.image1Style}/>
+              <MainViewer />
             </Col>
 
             <Col xs="3">
-              <AnnotatorViewer imageSrc={this.state.image1Src} imageStyle={this.state.image1Style}/>
+              <AnnotatorViewer />
             </Col>
           </Row>
         </Container>
@@ -69,4 +44,4 @@ class UI extends React.Component {
   }
 }
 
-export default withFileStore(UI);
+export default UI;

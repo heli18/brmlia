@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Slider from "../ui/components/slider.js"
+import {withFileStore} from "../utils/index.js";
 import "../styles.css"
 
 
@@ -41,7 +42,14 @@ class Viewer extends Component {
       updated: false
     },
     zoomPct: 1,
-    prevPct: 0
+    prevPct: 0,
+    image: {
+      src: require('./../ui/assets/images/brom.jpeg'),
+      name: "",
+      style: {},
+      x: 0,
+      y: 0
+    }
   };
 
   sliderValue(value, isUpdated, isSynced) {
@@ -57,7 +65,34 @@ class Viewer extends Component {
     }
   }
 
+  update(state) {
+    if (this.state.image.name !== state.file.name) {
+      this.state.image.name = state.file.name
+      this.state.image.src = state.file.image
+      this.state.image.style = state.file.style
+      this.forceUpdate();
+    }
+  }
+
+  resetZoom() {
+    this.setState( prevState => (
+    {
+      ...prevState,
+      zoomPct: 1,
+      image: {
+        ...prevState.image,
+        x: 0,
+        y: 0
+      }
+    }));
+  }
+
   render() {
+
+    const sub = this.props.api.subscribe(state =>  {
+      this.update(state);
+    })
+
     const {
       limitToBounds,
       panningEnabled,
@@ -78,7 +113,6 @@ class Viewer extends Component {
       step,
       scale
     } = this.state.zpp;
-    const { imageSrc, imageWidth, zoom }  = this.props;
     var sliderValue = this.sliderValue;
     if (this.state.zoomPct == "0.01") {
       this.state.zoomPct = scale;
@@ -86,10 +120,13 @@ class Viewer extends Component {
 
     return (
       <div className="viewer-wrapper">
+      {console.log("def x: ", this.state.image.x, " y: " , this.state.image.y)}
         <TransformWrapper
           defaultScale={1}
           defaultPositionX={0}
           defaultPositionY={0}
+          positionX={this.state.image.x}
+          positionY={this.state.image.y}
           scale={this.state.zoomPct}
           options={{
             limitToBounds,
@@ -131,7 +168,7 @@ class Viewer extends Component {
           {this.updateZoomValue(scale)}
           <React.Fragment>
             <TransformComponent>
-              <img src={imageSrc} alt="viewer" width={imageWidth}/>
+              <img src={this.state.image.src} alt="viewer" width={this.props.imageWidth}/>
             </TransformComponent>
             <span className="badge badge-primary">
               x : {Number(positionX).toFixed(0)}px
@@ -148,9 +185,12 @@ class Viewer extends Component {
         }
         </TransformWrapper>
         <Slider label="Zoom" width="40%" min="50" max="800" step="10" initial={this.state.zoomPct} multiplier="1" sliderValue={sliderValue.bind(this)} newValue={this.state.zoomPct} sync={this.state.slider.sync} />
+        <button id="resetZoomBtn" onClick={() => {this.resetZoom()}}>
+          Reset Zoom
+        </button>
       </div>
     );
   }
 }
 
-export default Viewer;
+export default withFileStore(Viewer);

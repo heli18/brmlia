@@ -91,7 +91,7 @@ class AnnotatorViewer extends React.Component {
         </div>
 
         <br></br>
-        <ChannelViewer imageSrc={this.props.imageSrc}/>
+        <ChannelViewer />
       </div>
     );
   }

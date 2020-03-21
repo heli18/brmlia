@@ -18,6 +18,8 @@ export const withUniformStore = (Component: any) => {
   };
 };
 
-
-
-
+export const withStore = (Component: any) => {
+  return (props: any) => {
+    return <Component uApi={uApi} fApi={fApi} {...props}/>;
+  };
+};

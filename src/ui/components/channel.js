@@ -31,12 +31,18 @@ class Channel extends React.Component {
 
   sliderValueBr(value) {
     updateBrightness(value)
-    console.log("sliderValueBr() - ch br: " + this.state.slider.brightness + " ch ct: " + this.state.slider.contrast);
   }
 
   sliderValueCt(value) {
     updateContrast(value)
-    console.log("sliderValueCt() - ch br: " + this.state.slider.brightness + " ch ct: " + this.state.slider.contrast);
+  }
+
+  resetBrightness() {
+    updateBrightness('0.0');
+  }
+
+  resetContrast() {
+    updateContrast('0.0');
   }
 
   render() {
@@ -55,7 +61,7 @@ class Channel extends React.Component {
         <UncontrolledCollapse toggler={`#view${this.props.ch}`}>
           <Card style={card} >
             <CardBody style={cardBody} >
-              <ImageCanvas className="annot-view" brightness={this.state.slider.brightness} contrast='0.0' image={this.props.imageSrc} alt="Ch1 Histogram"/>
+              <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram"/>
               "Insert Look up table here"
               <br>
               </br>
@@ -63,9 +69,15 @@ class Channel extends React.Component {
               </br>
               <div className="brightness-slider-container">
                 <Slider label="Brightness" width="40%" min="0" max="1" step="0.1" initial="0" multiplier="100" sliderValue={sliderValueBr.bind(this)} />
+                <button id="resetBrBtn" onClick={() => {this.resetBrightness()}}>
+                  Reset Brightness
+                </button>
               </div>
               <div className="contrast-slider-container">
                 <Slider label="Contrast" width="40%" min="0" max="10" step="1" initial="0" multiplier="10" sliderValue={sliderValueCt.bind(this)} />
+                <button id="resetCtBtn" onClick={() => {this.resetContrast()}}>
+                  Reset Contrast
+                </button>
               </div>
               <div className="blackpoint-slider-container">
                 <label htmlFor="blackpoint-slider"> Black Point </label>
@@ -83,4 +95,4 @@ class Channel extends React.Component {
   }
 }
 
-export default withUniformStore(Channel);
+export default Channel;

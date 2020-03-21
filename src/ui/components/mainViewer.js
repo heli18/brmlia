@@ -17,7 +17,7 @@ class mainViewer extends React.Component {
           <CardBody>
             <CardTitle> Image View </CardTitle>
           </CardBody>
-          <Viewer imageSrc={this.props.imageSrc} imageWidth={mainImg.width}/>
+          <Viewer imageWidth={mainImg.width}/>
           <br>
           </br>
         </Card>

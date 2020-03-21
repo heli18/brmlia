@@ -8,20 +8,18 @@ import {
 } from 'reactstrap';
 
 import Channel from "./channel.js"
-import { withUniformStore } from '../../utils/index.js'
 
 class ChannelViewer extends React.Component {
 
-  render() {
-    var sliderValueBr = this.sliderValueBr;
+  render() {;
     return (
       <div className="annotations-channel" style={cardStyle}>
         <Card style={card} >
           <CardBody>
             <CardTitle> Channel Selection </CardTitle>
-            <Channel imageSrc={this.props.imageSrc} ch="1"/>
-            <Channel imageSrc={this.props.imageSrc} ch="2"/>
-            <Channel imageSrc={this.props.imageSrc} ch="3"/>
+            <Channel ch="1"/>
+            <Channel ch="2"/>
+            <Channel ch="3"/>
           </CardBody>
         </Card>
       </div>
@@ -29,6 +27,4 @@ class ChannelViewer extends React.Component {
   }
 }
 
-// export default ChannelViewer;
-export default withUniformStore(ChannelViewer);
-
+export default ChannelViewer;
