@@ -38,11 +38,11 @@ class Channel extends React.Component {
   }
 
   resetBrightness() {
-    updateBrightness('0.0'), this.props.ch;
+    updateBrightness('0.0', this.props.ch);
   }
 
   resetContrast() {
-    updateContrast('0.0'), this.props.ch;
+    updateContrast('0.0', this.props.ch);
   }
 
   render() {
