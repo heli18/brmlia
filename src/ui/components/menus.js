@@ -14,7 +14,6 @@ import {
 } from 'reactstrap';
 
 import {ImageUpload} from "../../fileuploader/index.js";
-import {withFileStore} from "../../utils/index.js";
 
 class Menus extends React.Component {
 
@@ -82,10 +81,10 @@ class Menus extends React.Component {
         </UncontrolledButtonDropdown>
 
 
-        <Button outline color="primary" className="image-upload-btn"> <ImageUpload name="Import Image" store={this.props.store} api={this.props.api} />  </Button>
+        <Button outline color="primary" className="image-upload-btn"> <ImageUpload name="Import Image" />  </Button>
       </ButtonGroup>
     );
   }
 }
 
-export default withFileStore(Menus);
+export default Menus;

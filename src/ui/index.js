@@ -15,7 +15,6 @@ class UI extends React.Component {
   render() {
     return (
       <div className="main" style={mainStyle}>
-      {console.log("main store")}
         <Menus />
         <br>
         </br>

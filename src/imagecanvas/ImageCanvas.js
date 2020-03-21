@@ -9,11 +9,11 @@ import { canvasStyle } from '../ui/style.js'
 class ImageCanvas extends React.Component {
 
   updateForFile(state) {
-    if (this.props.uApi.getState().name !== state.file.name) {
-      let texture = createTexture(state.file.image);
+    if (this.props.uApi.getState().name !== state.file[state.selected].name) {
+      let texture = createTexture(state.file[state.selected].image);
       this.props.uApi.setState( prevState => ({
         ...prevState,
-        name: state.file.name,
+        name: state.file[state.selected].name,
         uniforms: {
           ...prevState.uniforms,
           image: {

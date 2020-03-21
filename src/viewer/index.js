@@ -49,7 +49,8 @@ class Viewer extends Component {
       style: {},
       x: 0,
       y: 0
-    }
+    },
+    selected: 0
   };
 
   sliderValue(value, isUpdated, isSynced) {
@@ -66,10 +67,12 @@ class Viewer extends Component {
   }
 
   update(state) {
-    if (this.state.image.name !== state.file.name) {
-      this.state.image.name = state.file.name
-      this.state.image.src = state.file.image
-      this.state.image.style = state.file.style
+    if ( (this.state.image.name !== state.file[state.selected].name)
+      || (this.state.selected !== state.selected)
+    ) {
+      this.state.image.name = state.file[state.selected].name
+      this.state.image.src = state.file[state.selected].image
+      this.state.image.style = state.file[state.selected].style
       this.forceUpdate();
     }
   }
@@ -120,7 +123,6 @@ class Viewer extends Component {
 
     return (
       <div className="viewer-wrapper">
-      {console.log("def x: ", this.state.image.x, " y: " , this.state.image.y)}
         <TransformWrapper
           defaultScale={1}
           defaultPositionX={0}

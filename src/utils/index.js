@@ -23,3 +23,4 @@ export const withStore = (Component: any) => {
     return <Component uApi={uApi} fApi={fApi} {...props}/>;
   };
 };
+
