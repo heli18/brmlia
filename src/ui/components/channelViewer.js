@@ -8,9 +8,12 @@ import {
 } from 'reactstrap';
 
 import Channel from "./channel.js"
+import { withUniformStore } from '../../utils/index.js'
 
 class ChannelViewer extends React.Component {
+
   render() {
+    var sliderValueBr = this.sliderValueBr;
     return (
       <div className="annotations-channel" style={cardStyle}>
         <Card style={card} >
@@ -26,4 +29,6 @@ class ChannelViewer extends React.Component {
   }
 }
 
-export default ChannelViewer;
+// export default ChannelViewer;
+export default withUniformStore(ChannelViewer);
+
