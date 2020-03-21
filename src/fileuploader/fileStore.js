@@ -10,7 +10,8 @@ export const initState = {
           display: 'block',
           width: 'auto',
           height: '100%'
-        }
+        },
+        type: ""
       }
     ],
   size: 1,

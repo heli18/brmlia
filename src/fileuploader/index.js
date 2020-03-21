@@ -68,7 +68,7 @@ function setSelected(idx) {
 export function ImageUpload(props) {
   const [files, setFiles] = useState([]);
   const {getRootProps, getInputProps} = useDropzone({
-    accept: 'image/*',
+    accept: 'image/png, image/tiff',
     onDrop: acceptedFiles => {
       setFiles(acceptedFiles.map(file =>
         Object.assign(file, {
@@ -84,6 +84,7 @@ export function ImageUpload(props) {
         <img
           src={file.preview}
           style={img}
+          type={file.type}
         />
       </div>
     </div>
@@ -99,7 +100,6 @@ export function ImageUpload(props) {
         />
       </div>
     </div>
-  ));
 
   const update = files.map(file => {
     if (isValidFile(file.name)) {
