@@ -1,6 +1,5 @@
 import React, { useRef, useMemo } from 'react';
 import { uApi } from '../../components/utils.js'
-import * as THREE from 'three';
 import {useFrame} from 'react-three-fiber'
 
 const fragmentShader = `
@@ -42,6 +41,7 @@ function Image() {
 
   useFrame(state => {
     material.current.uniforms.brightness.value = uApi.getState().uniforms.brightness.value;
+    material.current.uniforms.contrast.value = uApi.getState().uniforms.contrast.value;
   })
 
   return (
