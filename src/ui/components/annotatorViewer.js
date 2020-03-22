@@ -21,12 +21,6 @@ class AnnotatorViewer extends React.Component {
       annot3Sel: false,
       annot4Sel: false,
     },
-    slider: {
-      ch1: {
-        brightness: 0.0,
-        contrast: 0.0,
-      },
-    }
   };
 
   updateSelection = (sel) => {

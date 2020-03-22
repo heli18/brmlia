@@ -12,21 +12,14 @@ import ImageCanvas from '../../imagecanvas/ImageCanvas.js'
 import { withUniformStore } from '../../utils/index.js'
 import Slider from "./slider.js"
 import { updateBrightness, updateContrast } from '../../imagecanvas/CanvasControl.js'
+import {canvasApi} from '../../imagecanvas/canvasStore.js'
+import {updateChannelSel, settingsApi} from '../../mainSettings.js'
 
 class Channel extends React.Component {
 
-  state = {
-    sel: false,
-    slider: {
-      brightness: '0.0',
-      contrast: '0.0',
-    }
-  }
-
   updateSelection = () => {
-    this.setState(prevState => ({
-      sel: !this.state.sel
-    }));
+    updateChannelSel(this.props.ch)
+    this.forceUpdate()
   }
 
   sliderValueBr(value) {
@@ -46,13 +39,15 @@ class Channel extends React.Component {
   }
 
   render() {
-    console.log("Channel " + this.props.ch + " : " + this.state.sel);
     var sliderValueBr = this.sliderValueBr;
     var sliderValueCt = this.sliderValueCt;
+    var canvas = <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram" height="100px" channel={this.props.ch}/>
+    var sel = settingsApi.getState().channels[this.props.ch-1].selected
 
+    console.log("Channel " + this.props.ch + " : " + sel);
     return (
       <div>
-        <Button className="channelBtn" outline color="primary" id="channel-btn" onClick={() => { this.updateSelection() }} active={this.state.sel}>
+        <Button className="channelBtn" outline color="primary" id="channel-btn" onClick={() => { this.updateSelection() }} active={sel}>
           Channel {`${this.props.ch}`}
         </Button>
         <Button className="viewBtn" outline color="secondary" id={`view${this.props.ch}`}>
@@ -61,7 +56,7 @@ class Channel extends React.Component {
        <UncontrolledCollapse toggler={`#view${this.props.ch}`}>
           <Card style={card} >
             <CardBody style={cardBody} >
-              <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram" height="100px" channel={this.props.ch}/>
+              {canvas}
               "Insert Look up table here"
               <br>
               </br>
