@@ -8,13 +8,13 @@ export const createTexture = (image) => {
 }
 
 export const createTextureFromTiff = (image) => {
-  
-  //use async and promises to load the blob into a buffer, then decode it 
+
+  //use async and promises to load the blob into a buffer, then decode it
   //into an RGBA Uint8Array. Load the array into a DataTexture
   async function fetchImageBuffer(image) {
     // function input 'image' is already a blob,
     // but it was not working without explicitly creating the Blob...
-    const blob = new Blob([image]); 
+    const blob = new Blob([image]);
     const arrayBuffer = await new Response(blob).arrayBuffer();
     return arrayBuffer;
   }
@@ -33,10 +33,10 @@ export const createTextureFromTiff = (image) => {
     console.log(e)
   );
 
-  
-  const canv = fetchImageBuffer(image); 
+
+  const canv = fetchImageBuffer(image);
   Promise.resolve(canv).then(function(canv) {
-    console.log('Uint8Array with RGBA pixel length: ' + canv.byteLength); 
+    console.log('Uint8Array with RGBA pixel length: ' + canv.byteLength);
     // use DataTexture to load the RGBA Uint8Array into a texture
     // https://threejs.org/docs/index.html#api/en/textures/DataTexture
     // TODO: Get the actual height and width of the image for tiff spec
@@ -53,42 +53,61 @@ export const createTextureFromTiff = (image) => {
 
 const initState = {
   // todo: individual uniforms for separate channels
-  uniforms: {
-    brightness: {
-      value: '0.0'
-    },
-    contrast: {
-      value: '0.0'
-    },
-    image: {
-      value: ''
-    }
-  },
-  texture: null,
-  brightness: '0.0',
-  name: '',
-  type: ''
+  channels:
+    [
+      {
+        uniforms: {
+          brightness: {
+            value: '0.0'
+          },
+          contrast: {
+            value: '0.0'
+          },
+          image: {
+            value: ''
+          }
+        },
+        texture: null,
+        name: '',
+        type: ''
+      },
+      {
+
+        uniforms: {
+          brightness: {
+            value: '0.0'
+          },
+          contrast: {
+            value: '0.0'
+          },
+          image: {
+            value: ''
+          }
+        },
+        texture: null,
+        name: '',
+        type: ''
+      },
+      {
+
+        uniforms: {
+          brightness: {
+            value: '0.0'
+          },
+          contrast: {
+            value: '0.0'
+          },
+          image: {
+            value: ''
+          }
+        },
+        texture: null,
+        name: '',
+        type: ''
+      }
+    ]
 }
 
 export const [useUniformStore, uniApi] = create ( set => ( {
   ...initState,
-  update: (brightness, contrast, image) => set ( state => ({
-    ...state,
-    uniforms: {
-      ...state.uniforms,
-      brightness: {
-        ...state.uniforms.brightness,
-        value: brightness
-      },
-      contrast: {
-        ...state.uniforms.contrast,
-        value: contrast
-      },
-      image: {
-        ...state.uniforms.image,
-      },
-    },
-    texture: image,
-    brightness: brightness
-  })),
 }))

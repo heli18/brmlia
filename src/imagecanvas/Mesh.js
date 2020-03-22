@@ -30,21 +30,21 @@ const vertexShader = `
   }
 `;
 
-function Mesh() {
+function Mesh(props) {
 
   const ref = useRef()
   const material = useRef()
 
   var uniforms = useMemo(
     () =>
-      uApi.getState().uniforms,
+      uApi.getState().channels[props.channel-1].uniforms,
     []
   )
 
   useFrame(state => {
-    material.current.uniforms.brightness.value = uApi.getState().uniforms.brightness.value;
-    material.current.uniforms.contrast.value = uApi.getState().uniforms.contrast.value;
-    material.current.uniforms.image.value = uApi.getState().uniforms.image.value;
+    material.current.uniforms.brightness.value = uApi.getState().channels[props.channel-1].uniforms.brightness.value;
+    material.current.uniforms.contrast.value = uApi.getState().channels[props.channel-1].uniforms.contrast.value;
+    material.current.uniforms.image.value = uApi.getState().channels[props.channel-1].uniforms.image.value;
   })
 
   return (

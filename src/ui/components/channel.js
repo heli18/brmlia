@@ -61,7 +61,7 @@ class Channel extends React.Component {
        <UncontrolledCollapse toggler={`#view${this.props.ch}`}>
           <Card style={card} >
             <CardBody style={cardBody} >
-              <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram" height="100px"/>
+              <ImageCanvas className="annot-view" alt="Ch`${this.props.ch}` Histogram" height="100px" channel={this.props.ch}/>
               "Insert Look up table here"
               <br>
               </br>
