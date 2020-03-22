@@ -12,7 +12,8 @@ export const initState = {
       {
         selected: false
       },
-    ]
+    ],
+  lastSelected: 1
 }
 
 export const [useMainSettings, settingsApi] = create ( set => ({
@@ -35,4 +36,12 @@ export function updateChannelSel(channel) {
       channels
     }
   })
+}
+
+export function updateLastSel(channel) {
+  console.log("updateLastSel ", channel )
+  settingsApi.setState( prevState => ({
+    ...prevState,
+    lastSelected: channel
+  }))
 }

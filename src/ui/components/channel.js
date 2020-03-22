@@ -13,12 +13,13 @@ import { withUniformStore } from '../../utils/index.js'
 import Slider from "./slider.js"
 import { updateBrightness, updateContrast } from '../../imagecanvas/CanvasControl.js'
 import {canvasApi} from '../../imagecanvas/canvasStore.js'
-import {updateChannelSel, settingsApi} from '../../mainSettings.js'
+import {updateChannelSel, updateLastSel, settingsApi} from '../../mainSettings.js'
 
 class Channel extends React.Component {
 
   updateSelection = () => {
     updateChannelSel(this.props.ch)
+    updateLastSel(this.props.ch)
     this.forceUpdate()
   }
 

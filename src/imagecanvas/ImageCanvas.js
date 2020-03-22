@@ -6,6 +6,7 @@ import { canvasStyle } from '../ui/style.js'
 import { createTexture, createTextureFromTiff } from './imageStore.js'
 import { fApi, uApi } from '../utils/index.js'
 import { updateUniformImage } from './CanvasControl.js'
+import {canvasApi} from './canvasStore.js'
 
 class ImageCanvas extends React.Component {
 
@@ -36,8 +37,8 @@ class ImageCanvas extends React.Component {
 
     return (
       <div class="image-canvas-container" style={canvasStyle}>
-        <Canvas className='image-canvas'>
-          <Mesh channel={this.props.channel} />
+        <Canvas className='image-canvas' >
+          {canvasApi.getState().canvas[this.props.channel-1]}
         </Canvas>
       </div>
     );
