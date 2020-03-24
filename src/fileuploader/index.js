@@ -39,7 +39,8 @@ function addFile(file, img) {
     file: [...prevState.file, {
       name: file.name,
       image: file.preview,
-      style: img
+      style: img,
+      type: file.type
     }],
     size: prevState.size + 1
   }))

@@ -2,8 +2,11 @@ import create from 'zustand';
 import * as THREE from 'three';
 //import Tiff from 'tiff.js';
 import UTIF from 'utif';
+import UPNG from 'utif';
 
 export const createTexture = (image) => {
+  console.log(" createTexture() - texture " , new THREE.TextureLoader().load(image));
+
   return new THREE.TextureLoader().load(image);
 }
 
@@ -25,7 +28,7 @@ export const createTextureFromTiff = (image) => {
       let ifds = UTIF.decode(blob);
       UTIF.decodeImage(blob, ifds[0])
       let rgba = UTIF.toRGBA8(ifds[0]);  // Uint8Array with RGBA pixels
-      //console.log("WIDTH: " + ifds[0].width, "HEIGHT: " + ifds[0].height, ifds[0]);
+      // console.log("decoded ifds0: " + ifds[0].width, "HEIGHT: " + ifds[0].height, ifds[0]);
       return rgba;
     }
   })
@@ -45,6 +48,7 @@ export const createTextureFromTiff = (image) => {
     let width = 512; //dataView.getInt32(16);
     let height = 512; //dataView.getInt32(20);
     let texture = new THREE.DataTexture( canv, width, height, THREE.RGBFormat );
+    console.log("createTextureFromTiff() - texture " , texture);
     return texture;
   }, function(canv) {
   });

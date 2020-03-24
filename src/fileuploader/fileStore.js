@@ -11,7 +11,7 @@ export const initState = {
           width: 'auto',
           height: '100%'
         },
-        type: ""
+        type: "image/png"
       }
     ],
   size: 1,

@@ -14,7 +14,7 @@ class ImageCanvas extends React.Component {
     if (uApi.getState().name !== state.file[state.selected].name) {
 
       let texture = createTexture(state.file[state.selected].image);
-      if (state.file[state.selected].type === 'image/tiff') {
+      if (state.file[state.selected].type === "image/tiff") {
         console.log('tiff detected ==> converting to canvas');
         texture = createTextureFromTiff(state.file[state.selected].image);
       }
