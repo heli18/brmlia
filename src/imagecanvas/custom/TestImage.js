@@ -2,6 +2,8 @@ import React, { useRef, useMemo } from 'react';
 import { uApi } from '../../components/utils.js'
 import {useFrame} from 'react-three-fiber'
 
+import * as THREE from 'three';
+
 const fragmentShader = `
   uniform sampler2D image;
 
@@ -31,6 +33,11 @@ const vertexShader = `
 
 function Image() {
 
+
+  
+
+  console.log(uApi.getState().uniforms.image);
+
   const material = useRef()
 
   var uniforms = useMemo(
@@ -59,4 +66,3 @@ function Image() {
 }
 
 export default Image;
-
