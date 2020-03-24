@@ -9,6 +9,7 @@ import * as THREE from 'three';
 //import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js';
 import {RectAreaLight, RectAreaLightHelper, RectAreaLightUniformsLib} from "three";
 
+
 class TestImageComponent extends React.Component {
 
   state = {
@@ -113,10 +114,13 @@ var camera = new THREE.PerspectiveCamera(
 // Finally, set the camera's position in the z-dimension
 camera.position.z = 5;
 
-////////////////////////////////////////////////////////////// LAYERS
-camera.layers.enable( 0 ); // enabled by default
-camera.layers.enable( 1 );
-////////////////////////////////////////////////////////////// LAYERS
+////////////    flower picture
+
+//var canvas = document.getElementById('imageCanvas');
+//var context = canvas.getContext('2d');
+
+////////////    flower picture
+
 
 /**
 * Renderer
@@ -125,6 +129,7 @@ camera.layers.enable( 1 );
 // Create the canvas with a renderer
 var renderer = new THREE.WebGLRenderer({antialias: true});
 //var renderer = new THREE.WebGLRenderer({alpha: true});
+
 // Specify the size of the canvas
 renderer.setSize( window.innerWidth, window.innerHeight );
 
@@ -157,6 +162,22 @@ var mesh = new THREE.Mesh(geometry, material);
 // set the position of the image mesh in the x,y,z dimensions
 mesh.position.set(0,0,0)
 
+// RectAreaLight
+// RectAreaLightUniformsLib.init();
+// const color = 0xFFFFFF;
+// const intensity = 5;
+// const width = 12;
+// const height = 4;
+// const light_r = new THREE.RectAreaLight(color, intensity, width, height);
+// light_r.position.set(0, 10, 0);
+// light_r.rotation.x = THREE.MathUtils.degToRad(-90);
+
+//catScene.add(mesh);
+//catScene.add(light_r);
+
+//const helper = new RectAreaLightHelper(light_r);
+//light_r.add(helper);
+
 // add the image to the scene
 catScene.add(mesh);
 
@@ -173,72 +194,15 @@ light.position.set(1, 1, 100 );
 
 ////////////////////////////////////////////////////////////// LAYERS
 
-light.layers.enable( 0 );
-light.layers.enable( 1 );
+//light.layers.enable( 0 );
+//light.layers.enable( 1 );
 
-var object = new THREE.Mesh( geometry, mesh );
+//var object = new THREE.Mesh( geometry, mesh );
 
 ////////////////////////////////////////////////////////////// LAYERS
 
 // Add the light to the scene
-catScene.add(light)
-
-
-// RectAreaLightUniformsLib.init();
-//
-// var width = 10;
-// var height = 10;
-// var intensity = 1;
-// var rectLight = new THREE.RectAreaLight( 0xffffff, intensity,  width, height );
-// rectLight.position.set( 5, 5, 0 );
-// rectLight.lookAt( 0, 0, 0 );
-// catScene.add( rectLight )
-//
-// rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
-// rectLight.add( rectLightHelper );
-
-
-
-// function animate() {
-// requestAnimationFrame( animate );
-//
-//   renderer.render( catScene, camera );
-//   //renderer2.render( sceneBox, camera );
-//
-// }
-// animate();
-
-
-// Texture
-// const numberTexture = new THREE.CanvasTexture(
-//     document.querySelector('#imageCanvas')
-// );
-//
-// console.log(numberTexture);
-//
-// const spriteMaterial = new THREE.SpriteMaterial({
-//     map: numberTexture,
-//     alphaTest: 0.5,
-//     transparent: true,
-//     depthTest: false,
-//     depthWrite: false
-// });
-//
-// console.log(spriteMaterial);
-//
-// var sprite = new THREE.Sprite(spriteMaterial);
-// sprite.position.set(250, 250, 250);
-// sprite.scale.set(35, 35, 1);
-//
-// catScene.add(sprite);
-
-
-
-
-// box
-// var renderer2 = new THREE.WebGLRenderer();
-// renderer2.setSize( window.innerWidth, window.innerHeight );
-// document.body.appendChild( renderer2.domElement );
+//catScene.add(light)
 
 //var camera2 = new THREE.PerspectiveCamera( 45, 1, 1, 500 );
 var camera2 = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
@@ -252,18 +216,28 @@ sceneBox.background = new THREE.Color( 0xff0000 );
 var boxMaterial = new THREE.LineBasicMaterial({color: 0x0000ff});
 
 var points = [];
-points.push( new THREE.Vector3(-10,0,0));
-points.push( new THREE.Vector3(0,10,0));
-points.push( new THREE.Vector3(10,0,0));
-points.push( new THREE.Vector3(0,-10,0));
-points.push( new THREE.Vector3(-10,0,0));
+points.push( new THREE.Vector3(-3,0,0));
+points.push( new THREE.Vector3(-3,3,0));
+points.push( new THREE.Vector3(0,3,0));
+points.push( new THREE.Vector3(0,0,0));
+points.push( new THREE.Vector3(-3,0,0));
 
-var geometry = new THREE.BufferGeometry().setFromPoints( points );
+var geometry2 = new THREE.BufferGeometry().setFromPoints( points );
 //var boxMaterial = new THREE.LineBasicMaterial({color: 0x0000ff});
-var lineOnCat = new THREE.Line( geometry, boxMaterial );
-
-//sceneBox.add( lineOnCat );
+var lineOnCat = new THREE.Line( geometry2, boxMaterial );
 sceneBox.add( lineOnCat );
+
+points = [];
+points.push( new THREE.Vector3(-4,0,0));
+points.push( new THREE.Vector3(-4,4,0));
+points.push( new THREE.Vector3(0,4,0));
+points.push( new THREE.Vector3(0,0,0));
+points.push( new THREE.Vector3(-4,0,0));
+
+var geometry5 = new THREE.BufferGeometry().setFromPoints( points );
+//var boxMaterial = new THREE.LineBasicMaterial({color: 0x0000ff});
+var lineOnCat2 = new THREE.Line( geometry5, boxMaterial );
+sceneBox.add( lineOnCat2 );
 
 // Add a point light with #fff color, .7 intensity, and 0 distance
 var light2 = new THREE.PointLight( 0xffffff, 1, 0 );
@@ -273,63 +247,25 @@ light2.position.set(1, 1, 100 );
 
 // Add the light to the scene
 sceneBox.add(light2)
-//sceneBox.add(light)
 
-// requestAnimationFrame( animate );
+//light.layers.enable( 1 )
+//light.layers.enable( 0 )
+
+var meshLayers = new THREE.Mesh(geometry, material);
+sceneBox.add( meshLayers );
 
 
-//renderer.render( sceneBox, camera );
-
-
-
-// Overlay
-//renderer2.clearDepth(); // important! clear the depth buffer
-// renderer.setViewport( 10, window.innerHeight - insetHeight - 10, insetWidth, insetHeight );
-//renderer2.setViewport( 10, 0, window.innerWidth, window.innerHeight );
-//renderer2.render( scene2, camera );
 
 function animate() {
 requestAnimationFrame( animate );
-  renderer.render( catScene, camera );
-  renderer.setClearColor(0xffffff, 0);
-  renderer.clearDepth();
+  //renderer.render( catScene, camera );
+  //renderer.setClearColor(0xffffff, 0);
+  //renderer.clearDepth();
   renderer.render( sceneBox, camera2 );
 }
+
+
 animate();
-
-// function animate2() {
-// requestAnimationFrame( animate );
-//   renderer2.render( scene2, camera );
-// }
-// animate2();
-
-
-    // var renderer = new THREE.WebGLRenderer();
-    // renderer.setSize( window.innerWidth, window.innerHeight );
-    // document.body.appendChild( renderer.domElement );
-    //
-    // var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
-    // camera.position.set( 0, 0, 100 );
-    // camera.lookAt( 0, 0, 0 );
-    //
-    // var scene = new THREE.Scene();
-    // var material = new THREE.LineBasicMaterial({color: 0x0000ff});
-    // var points = [];
-    // points.push( new THREE.Vector3(-10,0,0));
-    // points.push( new THREE.Vector3(0,10,0));
-    // points.push( new THREE.Vector3(10,0,0));
-    // points.push( new THREE.Vector3(0,-10,0));
-    // points.push( new THREE.Vector3(-10,0,0));
-    // var geometry2 = new THREE.BufferGeometry().setFromPoints( points );
-    // var line = new THREE.Line( geometry2, material );
-    //
-    // var geometry2 = new THREE.BoxGeometry( 1, 1, 1 );
-    // var material2 = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-    // var cube = new THREE.Mesh( geometry2, material2 );
-    // scene.add( cube );
-    //
-    // scene.add( line );
-    // renderer.render( scene, camera );
 
 
 
