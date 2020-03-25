@@ -44,7 +44,7 @@ class Viewer extends Component {
     zoomPct: 1,
     prevPct: 0,
     image: {
-      src: require('./../ui/assets/images/brom.jpeg'),
+      src: "",
       name: "",
       style: {},
       x: 0,
@@ -67,13 +67,16 @@ class Viewer extends Component {
   }
 
   update(state) {
-    if ( (this.state.image.name !== state.file[state.selected].name)
-      || (this.state.selected !== state.selected)
-    ) {
-      this.state.image.name = state.file[state.selected].name
-      this.state.image.src = state.file[state.selected].image
-      this.state.image.style = state.file[state.selected].style
-      this.forceUpdate();
+    if (state && state.file.length > 0) {
+      if ( (this.state.image.name !== state.file[state.selected].name)
+        || (this.state.selected !== state.selected)
+      ) {
+        this.state.image.name = state.file[state.selected].name
+        this.state.image.src = state.file[state.selected].image
+        this.state.image.style = state.file[state.selected].style
+        this.state.selected = state.selected
+        this.forceUpdate();
+      }
     }
   }
 
@@ -90,8 +93,16 @@ class Viewer extends Component {
     }));
   }
 
-  render() {
+  view() {
+    this.update(this.props.api.getState());
+    if (this.state.image.src !== "") {
+      return (
+        <img src={this.state.image.src} alt="viewer" width={this.props.imageWidth}/>
+      )
+    }
+  }
 
+  render() {
     const sub = this.props.api.subscribe(state =>  {
       this.update(state);
     })
@@ -170,7 +181,7 @@ class Viewer extends Component {
           {this.updateZoomValue(scale)}
           <React.Fragment>
             <TransformComponent>
-              <img src={this.state.image.src} alt="viewer" width={this.props.imageWidth}/>
+              { this.view() }
             </TransformComponent>
             <span className="badge badge-primary">
               x : {Number(positionX).toFixed(0)}px

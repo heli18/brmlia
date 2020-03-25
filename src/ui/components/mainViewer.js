@@ -13,7 +13,10 @@ import { settingsApi } from '../../mainSettings.js';
 
 class mainViewer extends React.Component {
 
-  channel = 1;
+  state = {
+    view: <Viewer imageWidth={mainImg.width}/>,
+    channel: 1
+  }
 
   altView() {
     return (
@@ -21,7 +24,7 @@ class mainViewer extends React.Component {
         <CardBody>
           <CardTitle> Image View </CardTitle>
         </CardBody>
-        <Viewer imageWidth={mainImg.width}/>
+        {this.state.view}
         <br>
         </br>
       </Card>
@@ -33,8 +36,8 @@ class mainViewer extends React.Component {
     // copy display from last enabled channel for now
     var view;
 
-    if (settingsApi.getState().channels[this.channel-1].selected) {
-      view = canvasApi.getState().canvas[this.channel-1]
+    if (settingsApi.getState().channels[this.state.channel-1].selected) {
+      view = canvasApi.getState().canvas[this.state.channel-1]
     }
 
     return (
@@ -61,7 +64,7 @@ class mainViewer extends React.Component {
 
   render() {
     settingsApi.subscribe(state => {
-      this.channel = state.lastSelected;
+      this.state.channel = state.lastSelected;
       this.forceUpdate();
     })
     return (

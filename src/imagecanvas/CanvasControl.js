@@ -69,7 +69,7 @@ export function updateBrightness(value, channel) {
     return true;
   }
   else {
-    console.log("null state", uApi.getState(), " channel: " , channel, " value: ", value)
+    console.log("CanvasControl::UpdateBrighness() - null state", uApi.getState(), " channel: " , channel, " value: ", value)
   }
   return false;
 }
@@ -82,7 +82,7 @@ export function updateContrast(value, channel) {
     return true;
   }
   else {
-    console.log("null state", uApi.getState(), " channel: " , channel, " value: ", value)
+    console.log("CanvasControl::updateContrast() - null state", uApi.getState(), " channel: " , channel, " value: ", value)
   }
   return false;
 }
