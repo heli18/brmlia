@@ -1,0 +1,62 @@
+{
+  "name": "brmlia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "axios": "^0.19.2",
+    "babel": "^6.23.0",
+    "bootstrap": "^4.4.1",
+    "concurrently": "^5.1.0",
+    "csvtojson": "^2.0.10",
+    "image-js": "^0.21.9",
+    "material-ui": "^0.20.2",
+    "material-ui-slider": "^3.0.8",
+    "nodemon": "^2.0.2",
+    "rc-progress": "^2.5.2",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
+    "react-dom": "^16.13.0",
+    "react-dropzone": "^10.2.1",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.12.2",
+    "react-scripts": "^2.1.8",
+    "react-three-fiber": "^4.0.20",
+    "react-zoom-pan-pinch": "^1.6.1",
+    "reactstrap": "^8.4.1",
+    "styled-components": "^5.0.1",
+    "three": "^0.114.0",
+    "utif": "^3.1.0",
+    "zustand": "^2.2.3"
+  },
+  "scripts": {
+    "start": "PORT=2000 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test:coverage": "npm run test -- --coverage",
+    "format": "prettier --write \"**/*.+(js|json|css)\"",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brmlia/brmlia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brmlia/brmlia/issues"
+  },
+  "homepage": "http://Brmlia.github.io/brmlia",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
