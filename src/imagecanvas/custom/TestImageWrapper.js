@@ -4,9 +4,6 @@ import { Canvas } from 'react-three-fiber'
 import AnnotationLayer from './AnnotationLayer';
 import './TestImageWrapper.css';
 
-
-
-
 export function TestImageWrapper() {
   return (
     <div id="canvasContainer">
@@ -15,7 +12,7 @@ export function TestImageWrapper() {
           <Image />
         </Canvas>
       </div>
-        <AnnotationLayer /> 
+      <AnnotationLayer />
     </div>
   )
 }
