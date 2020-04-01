@@ -39,7 +39,7 @@ export default class AnnotationLayer extends React.Component {
       if (this.state.mousedown) {
         const ctx = this.canvas.current.getContext("2d");
         ctx.clearRect(0, 0, this.canvas.current.width, this.canvas.current.height); //clear canvas
-      
+        ctx.beginPath();
         var width = this.state.mousex - this.state.lastMousex;
         var height = this.state.mousey - this.state.lastMousey;
         ctx.rect(this.state.lastMousex,this.state.lastMousey,width,height);
