@@ -38,6 +38,20 @@ class Slider extends Component {
     sliderValue(this.state.slider.value, this.state.updated, this.state.sync);
   }
 
+  displayValue() {
+    if (this.props.raw === "1") {
+      return (
+        <span> {this.state.slider.value * this.props.multiplier}</span>
+      )
+    }
+    else {
+      return (
+        <span> {this.state.slider.value * this.props.multiplier}%</span>
+      )
+    }
+  }
+
+
   handleSliderChange = (e) => {
     e.persist();
 
