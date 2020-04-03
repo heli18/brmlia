@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import Image from "./TestImage.js";
 import { Canvas } from 'react-three-fiber'
 import AnnotationLayer from './AnnotationLayer';
+import ImageLayer from './ImageLayer';
 import './TestImageWrapper.css';
 
 export function TestImageWrapper() {
   return (
     <div id="canvasContainer">
-      <div id="imageLayer">
-        <Canvas>
-          <Image />
-        </Canvas>
-      </div>
+      <ImageLayer />
       <AnnotationLayer />
     </div>
   )
