@@ -15,6 +15,11 @@ const initState = {
   ctx: null
 }
 
+const fabricRectState = {
+  rects: []
+}
+
 export const [useAnnotStore, annotApi] = create ( set => ( {
-  ...initState
+  // ...initState
+  ...fabricRectState
 }))

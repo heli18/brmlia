@@ -1,7 +1,7 @@
 import React from "react";
 
-import { addAnnotation } from '../annotations/annotationControl.js'
-import { annotApi } from '../annotations/annotationStore.js'
+import { addAnnotation } from '../annotations/context/annotationControl.js'
+import { annotApi } from '../annotations/context/annotationStore.js'
 
 export default class AnnotationLayer extends React.Component {
   constructor(props){
